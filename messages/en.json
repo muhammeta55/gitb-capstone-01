@@ -1,0 +1,23 @@
+{
+  "common": {
+    "signUp": "Sign Up"
+  },
+  "nav": {
+    "home": "Home",
+    "bootcamps": "Bootcamps",
+    "schedule": "Schedule",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "brandName": "GITBootcamp",
+    "tagline": "Practical bootcamps to launch your tech career.",
+    "columnBootcamps": "Bootcamps",
+    "allBootcamps": "All Bootcamps",
+    "columnCompany": "Company",
+    "columnAccount": "Account",
+    "login": "Login",
+    "register": "Register",
+    "copyright": "All rights reserved."
+  }
+}

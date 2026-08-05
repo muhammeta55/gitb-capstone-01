@@ -1,0 +1,23 @@
+{
+  "common": {
+    "signUp": "Kayıt Ol"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "bootcamps": "Bootcamp'ler",
+    "schedule": "Program",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "footer": {
+    "brandName": "GITBootcamp",
+    "tagline": "Teknoloji kariyerinizi başlatacak pratik bootcamp'ler.",
+    "columnBootcamps": "Bootcamp'ler",
+    "allBootcamps": "Tüm Bootcamp'ler",
+    "columnCompany": "Şirket",
+    "columnAccount": "Hesap",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "copyright": "Tüm hakları saklıdır."
+  }
+}
