@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -38,9 +39,7 @@ export function Header() {
           <button className="text-sm text-text border border-border rounded-md px-2 py-1">
             EN
           </button>
-          <button className="text-sm text-text border border-border rounded-md px-2 py-1">
-            🌙
-          </button>
+          <ThemeToggle />
           <Button size="sm">{tCommon("signUp")}</Button>
         </div>
 
