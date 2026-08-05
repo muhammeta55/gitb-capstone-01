@@ -19,5 +19,17 @@
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
     "copyright": "Tüm hakları saklıdır."
+  },
+  "bootcampsPage": {
+    "title": "Bootcamp'ler",
+    "subtitle": "Size uygun programı bulmak için {count} bootcamp'in tümüne göz atın."
+  },
+  "bootcampCard": {
+    "weeks": "hafta",
+    "level": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
+    }
   }
 }

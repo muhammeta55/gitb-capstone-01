@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { Bootcamp, Level } from "@/types";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -10,17 +11,13 @@ const levelVariant: Record<Level, "success" | "warning" | "error"> = {
   advanced: "error",
 };
 
-const levelLabel: Record<Level, string> = {
-  beginner: "Beginner",
-  intermediate: "Intermediate",
-  advanced: "Advanced",
-};
-
 interface BootcampCardProps {
   bootcamp: Bootcamp;
 }
 
 export function BootcampCard({ bootcamp }: BootcampCardProps) {
+  const t = useTranslations("bootcampCard");
+
   return (
     <Link href={`/bootcamps/${bootcamp.slug}`} className="block group">
       <Card className="overflow-hidden p-0 transition-shadow hover:shadow-lg">
@@ -36,7 +33,7 @@ export function BootcampCard({ bootcamp }: BootcampCardProps) {
         <div className="p-4 space-y-2">
           <div className="flex items-center gap-2">
             <Badge variant={levelVariant[bootcamp.level]}>
-              {levelLabel[bootcamp.level]}
+              {t(`level.${bootcamp.level}`)}
             </Badge>
             <Badge variant="muted">{bootcamp.format}</Badge>
           </div>
@@ -47,7 +44,7 @@ export function BootcampCard({ bootcamp }: BootcampCardProps) {
             {bootcamp.shortDescription}
           </p>
           <div className="flex items-center justify-between pt-2 text-sm">
-            <span>{bootcamp.durationWeeks} weeks</span>
+            <span>{bootcamp.durationWeeks} {t("weeks")}</span>
             <span className="font-semibold">€{bootcamp.priceEUR}</span>
           </div>
         </div>
