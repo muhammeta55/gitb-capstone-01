@@ -19,5 +19,17 @@
     "login": "Login",
     "register": "Register",
     "copyright": "All rights reserved."
+  },
+  "bootcampsPage": {
+    "title": "Bootcamps",
+    "subtitle": "Browse all {count} bootcamps and find the right program for you."
+  },
+  "bootcampCard": {
+    "weeks": "weeks",
+    "level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
   }
 }
