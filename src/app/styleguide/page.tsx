@@ -1,3 +1,13 @@
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Checkbox } from "@/components/ui/Checkbox";
+import { Select } from "@/components/ui/Select";
+import { Skeleton } from "@/components/ui/Skeleton";
+import { Spinner } from "@/components/ui/Spinner";
+
 export default function StyleguidePage() {
   const colors = [
     { label: "Primary", bg: "bg-primary" },
@@ -82,6 +92,71 @@ export default function StyleguidePage() {
           ))}
         </div>
       </section>
+      <section>
+        <h2 className="font-heading text-xl mb-4">Buttons</h2>
+        <div className="flex flex-wrap gap-4 items-center">
+            <Button variant="primary">Primary</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button size="sm">Small</Button>
+            <Button size="lg">Large</Button>
+            <Button isLoading>Loading</Button>
+            <Button disabled>Disabled</Button>
+        </div>
+        </section>
+        <section>
+            <h2 className="font-heading text-xl mb-4">Card</h2>
+            <Card className="max-w-sm">
+                <h3 className="font-heading text-lg mb-2">Sample Card</h3>
+                <p className="text-text">This is card content using the surface background and border tokens.</p>
+            </Card>
+        </section>
+
+        <section>
+            <h2 className="font-heading text-xl mb-4">Badges</h2>
+            <div className="flex flex-wrap gap-2">
+                <Badge variant="primary">Primary</Badge>
+                <Badge variant="success">Success</Badge>
+                <Badge variant="warning">Warning</Badge>
+                <Badge variant="error">Error</Badge>
+                <Badge variant="muted">Muted</Badge>
+            </div>
+        </section>
+        <section>
+        <h2 className="font-heading text-xl mb-4">Form Elements</h2>
+        <div className="flex flex-col gap-4 max-w-sm">
+            <Input id="demo-input" label="Email" placeholder="you@example.com" />
+            <Input id="demo-input-error" label="Email" error="This field is required" />
+            <Textarea id="demo-textarea" label="Message" placeholder="Type here..." />
+            <Checkbox id="demo-checkbox" label="I agree to the terms" />
+        </div>
+        </section>
+        <section>
+        <h2 className="font-heading text-xl mb-4">Select</h2>
+        <Select id="demo-select" label="Category" className="max-w-sm">
+            <option value="">Choose a category</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+        </Select>
+        </section>
+
+        <section>
+        <h2 className="font-heading text-xl mb-4">Skeleton</h2>
+        <div className="flex flex-col gap-2 max-w-sm">
+            <Skeleton className="h-6 w-3/4" />
+            <Skeleton className="h-6 w-1/2" />
+            <Skeleton className="h-32 w-full" />
+        </div>
+        </section>
+
+        <section>
+        <h2 className="font-heading text-xl mb-4">Spinner</h2>
+        <div className="flex gap-4 items-center">
+            <Spinner size="sm" />
+            <Spinner size="md" />
+            <Spinner size="lg" />
+        </div>
+        </section>
     </main>
   );
 }
