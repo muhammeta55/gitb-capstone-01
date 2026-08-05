@@ -1,25 +1,27 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/bootcamps", label: "Bootcamps" },
-  { href: "/schedule", label: "Schedule" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
 export function Header() {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
+
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/bootcamps", label: t("bootcamps") },
+    { href: "/schedule", label: t("schedule") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
+
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo */}
         <Link href="/" className="font-heading text-xl text-text">
           GITBootcamp
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
@@ -32,19 +34,14 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Right side controls */}
         <div className="hidden md:flex items-center gap-3">
-          {/* Placeholder language switcher — wired for real in B-01 */}
           <button className="text-sm text-text border border-border rounded-md px-2 py-1">
             EN
           </button>
-
-          {/* Placeholder theme toggle — wired for real in B-02 */}
           <button className="text-sm text-text border border-border rounded-md px-2 py-1">
             🌙
           </button>
-
-          <Button size="sm">Sign Up</Button>
+          <Button size="sm">{tCommon("signUp")}</Button>
         </div>
 
         <MobileMenu />
