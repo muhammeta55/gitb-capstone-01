@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -36,9 +37,7 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <button className="text-sm text-text border border-border rounded-md px-2 py-1">
-            EN
-          </button>
+          <LanguageSwitcher />
           <ThemeToggle />
           <Button size="sm">{tCommon("signUp")}</Button>
         </div>
