@@ -55,6 +55,7 @@
         "description": "Graduate with a verifiable certificate and a portfolio you can show employers."
       }
     },
+
     "howItWorks": {
       "title": "How it works",
       "apply": {
@@ -73,6 +74,29 @@
         "title": "Graduate & get hired",
         "description": "Walk away with a portfolio, a certificate, and career support until you land a job."
       }
+    },
+
+    "pricing": {
+      "title": "Simple, transparent pricing",
+      "mostPopular": "Most popular",
+      "perMonth": "month",
+      "perYear": "year",
+      "customPricing": "Custom pricing",
+      "cta": "Get started"
+    },
+    "newsletter": {
+      "title": "Get bootcamp updates in your inbox",
+      "subtitle": "New cohort dates, career tips, and the occasional discount. No spam.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "submit": "Subscribe",
+      "invalidEmail": "Enter a valid email address.",
+      "success": "You're subscribed — check your inbox to confirm."
+    },
+    "closingCta": {
+      "title": "Ready to start your next chapter?",
+      "subtitle": "Talk to an advisor or browse our bootcamps — the next cohort might be closer than you think.",
+      "cta": "Explore bootcamps"
     }
   },
   "footer": {
