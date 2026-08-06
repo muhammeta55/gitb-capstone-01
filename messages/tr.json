@@ -89,7 +89,24 @@
   },
   "bootcampsPage": {
     "title": "Bootcamp'ler",
-    "subtitle": "Size uygun programı bulmak için {count} bootcamp'in tümüne göz atın."
+    "subtitle": "Size uygun programı bulmak için {count} bootcamp'in tümüne göz atın.",
+    "searchPlaceholder": "Bootcamp ara...",
+    "allLevels": "Tüm seviyeler",
+    "clearFilters": "Filtreleri temizle",
+    "noResults": "Sonuç bulunamadı",
+    "noResultsHint": "Farklı bir arama veya filtre deneyin.",
+    "resultCount": "{count} sonuç bulundu",
+    "level": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
+    },
+    "sort": {
+      "popular": "Popülerlik",
+      "price-asc": "Fiyat (artan)",
+      "price-desc": "Fiyat (azalan)",
+      "duration": "Süre"
+    }
   },
   "bootcampCard": {
     "weeks": "hafta",
