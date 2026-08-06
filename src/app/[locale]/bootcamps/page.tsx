@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { bootcamps } from "@/data/bootcamps";
 import { categories } from "@/data/categories";
 import { BootcampsBrowser } from "@/components/bootcamps/BootcampsBrowser";
+import { BootcampsGridSkeleton } from "@/components/bootcamps/BootcampGridSkeleton";
 
 export default function BootcampsPage() {
   const t = useTranslations("bootcampsPage");
@@ -16,7 +17,7 @@ export default function BootcampsPage() {
         </p>
       </div>
 
-      <Suspense>
+      <Suspense fallback={<BootcampsGridSkeleton />}>
         <BootcampsBrowser bootcamps={bootcamps} categories={categories} />
       </Suspense>
     </main>
