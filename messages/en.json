@@ -27,6 +27,52 @@
     "categories": {
       "title": "Explore by category",
       "courseCount": "{count} programs"
+    },
+    "features": {
+      "title": "Why choose GITBootcamp",
+      "liveClasses": {
+        "title": "Live, instructor-led classes",
+        "description": "Every session is live and interactive — not pre-recorded videos you watch alone."
+      },
+      "projectBased": {
+        "title": "Project-based curriculum",
+        "description": "You ship a real, deployed project by the end of every bootcamp, not just exercises."
+      },
+      "smallCohorts": {
+        "title": "Small cohorts",
+        "description": "Cohorts stay small so instructors know your name — and your code."
+      },
+      "careerSupport": {
+        "title": "Career support",
+        "description": "Resume reviews, mock interviews, and introductions to our 140+ hiring partners."
+      },
+      "flexibleFormat": {
+        "title": "Flexible formats",
+        "description": "Choose online, hybrid, or onsite — whichever fits your life."
+      },
+      "certificate": {
+        "title": "Certificate of completion",
+        "description": "Graduate with a verifiable certificate and a portfolio you can show employers."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "apply": {
+        "title": "Apply",
+        "description": "Submit a short application — no coding experience required for beginner tracks."
+      },
+      "meetAdvisor": {
+        "title": "Meet an advisor",
+        "description": "A 20-minute call to match you with the right bootcamp and format."
+      },
+      "learn": {
+        "title": "Learn",
+        "description": "Join your cohort for live classes, projects, and 1:1 mentorship."
+      },
+      "graduate": {
+        "title": "Graduate & get hired",
+        "description": "Walk away with a portfolio, a certificate, and career support until you land a job."
+      }
     }
   },
   "footer": {
