@@ -8,7 +8,12 @@ function groupByMonth(locale: string) {
   const enriched = cohorts
     .map((cohort) => {
       const bootcamp = bootcamps.find((b) => b.slug === cohort.bootcampSlug);
-      if (!bootcamp) return null;
+      if (!bootcamp) {
+        console.warn(
+          `Cohort "${cohort.id}" references missing bootcamp slug "${cohort.bootcampSlug}" — skipping.`
+        );
+        return null;
+      }
       return { cohort, bootcamp };
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
