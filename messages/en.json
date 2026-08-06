@@ -73,8 +73,15 @@
         "title": "Graduate & get hired",
         "description": "Walk away with a portfolio, a certificate, and career support until you land a job."
       }
+    },
+    "instructors": {
+      "title": "Learn from people who ship"
+    },
+    "testimonials": {
+      "title": "What our graduates say"
     }
   },
+
   "footer": {
     "brandName": "GITBootcamp",
     "tagline": "Practical bootcamps to launch your tech career.",
