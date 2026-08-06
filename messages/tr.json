@@ -20,6 +20,13 @@
       "graduates": "Mezun",
       "employmentRate": "6 ay içinde işe yerleşiyor",
       "partners": "İşe alım partneri"
+    },
+    "featured": {
+      "title": "Öne çıkan programlar"
+    },
+    "categories": {
+      "title": "Kategoriye göre keşfet",
+      "courseCount": "{count} program"
     }
   },
   "footer": {

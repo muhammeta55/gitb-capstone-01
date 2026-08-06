@@ -20,6 +20,13 @@
       "graduates": "Graduates",
       "employmentRate": "Employed within 6 months",
       "partners": "Hiring partners"
+    },
+    "featured": {
+      "title": "Featured programs"
+    },
+    "categories": {
+      "title": "Explore by category",
+      "courseCount": "{count} programs"
     }
   },
   "footer": {
