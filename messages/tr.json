@@ -142,5 +142,15 @@
       "intermediate": "Orta",
       "advanced": "İleri"
     }
+  },
+  "schedulePage": {
+    "title": "Program Takvimi",
+    "subtitle": "Yaklaşan kohortları ve başlangıç tarihlerini görün.",
+    "started": "Başladı",
+    "days": "gün",
+    "hours": "saat",
+    "minutes": "dk",
+    "seconds": "sn",
+    "seatsLeft": "{count} koltuk kaldı"
   }
 }

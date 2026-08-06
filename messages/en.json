@@ -142,5 +142,15 @@
       "intermediate": "Intermediate",
       "advanced": "Advanced"
     }
+  },
+  "schedulePage": {
+    "title": "Schedule",
+    "subtitle": "View upcoming cohorts and their start dates.",
+    "started": "Started",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "seatsLeft": "{count} seats left"
   }
 }
