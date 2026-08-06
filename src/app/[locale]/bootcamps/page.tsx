@@ -1,6 +1,9 @@
+import { Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { bootcamps } from "@/data/bootcamps";
-import { BootcampCard } from "@/components/bootcamps/BootcampCard";
+import { categories } from "@/data/categories";
+import { BootcampsBrowser } from "@/components/bootcamps/BootcampsBrowser";
+import { BootcampsGridSkeleton } from "@/components/bootcamps/BootcampGridSkeleton";
 
 export default function BootcampsPage() {
   const t = useTranslations("bootcampsPage");
@@ -14,11 +17,9 @@ export default function BootcampsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bootcamps.map((bootcamp) => (
-          <BootcampCard key={bootcamp.slug} bootcamp={bootcamp} />
-        ))}
-      </div>
+      <Suspense fallback={<BootcampsGridSkeleton />}>
+        <BootcampsBrowser bootcamps={bootcamps} categories={categories} />
+      </Suspense>
     </main>
   );
 }

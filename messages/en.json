@@ -116,7 +116,24 @@
   },
   "bootcampsPage": {
     "title": "Bootcamps",
-    "subtitle": "Browse all {count} bootcamps and find the right program for you."
+    "subtitle": "Browse all {count} bootcamps and find the right program for you.",
+    "searchPlaceholder": "Search bootcamps...",
+    "allLevels": "All levels",
+    "clearFilters": "Clear filters",
+    "noResults": "No results found",
+    "noResultsHint": "Try a different search or filter.",
+    "resultCount": "{count} results found",
+    "level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "sort": {
+      "popular": "Popularity",
+      "price-asc": "Price (low to high)",
+      "price-desc": "Price (high to low)",
+      "duration": "Duration"
+    }
   },
   "bootcampCard": {
     "weeks": "weeks",
