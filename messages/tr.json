@@ -79,6 +79,28 @@
     },
     "testimonials": {
       "title": "Mezunlarımız ne diyor"
+    },
+    "pricing": {
+      "title": "Basit, şeffaf fiyatlandırma",
+      "mostPopular": "En popüler",
+      "perMonth": "ay",
+      "perYear": "yıl",
+      "customPricing": "Özel fiyatlandırma",
+      "cta": "Hemen başla"
+    },
+    "newsletter": {
+      "title": "Bootcamp güncellemeleri gelen kutunda",
+      "subtitle": "Yeni dönem tarihleri, kariyer ipuçları ve ara sıra indirimler. Spam yok.",
+      "emailLabel": "E-posta adresi",
+      "emailPlaceholder": "sen@ornek.com",
+      "submit": "Abone ol",
+      "invalidEmail": "Geçerli bir e-posta adresi gir.",
+      "success": "Abone oldun — onaylamak için gelen kutunu kontrol et."
+    },
+    "closingCta": {
+      "title": "Yeni bir başlangıca hazır mısın?",
+      "subtitle": "Bir danışmanla konuş ya da bootcamp'lerimize göz at — bir sonraki dönem düşündüğünden daha yakın olabilir.",
+      "cta": "Bootcamp'leri keşfet"
     }
   },
   "footer": {

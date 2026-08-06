@@ -6,6 +6,9 @@ import { Features } from "@/components/landing/Features";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Instructors } from "@/components/landing/Instructors";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { Pricing } from "@/components/landing/Pricing";
+import { Newsletter } from "@/components/landing/Newsletter";
+import { ClosingCTA } from "@/components/landing/ClosingCTA";
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <HowItWorks />
       <Instructors />
       <Testimonials />
+      <Pricing />
+      <Newsletter />
+      <ClosingCTA />
     </>
   );
 }
