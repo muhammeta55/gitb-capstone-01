@@ -16,6 +16,53 @@
       "ctaPrimary": "Bootcamp'leri keşfet",
       "ctaSecondary": "Bir danışmanla konuş"
     },
+
+    "features": {
+      "title": "Neden GITBootcamp",
+      "liveClasses": {
+        "title": "Canlı, eğitmenli dersler",
+        "description": "Her ders canlı ve etkileşimli — tek başına izlediğin kayıtlı videolar değil."
+      },
+      "projectBased": {
+        "title": "Proje tabanlı müfredat",
+        "description": "Her bootcamp sonunda sadece alıştırma değil, gerçek ve yayınlanmış bir proje çıkarıyorsun."
+      },
+      "smallCohorts": {
+        "title": "Küçük gruplar",
+        "description": "Gruplar küçük kalır, eğitmenler adını da kodunu da tanır."
+      },
+      "careerSupport": {
+        "title": "Kariyer desteği",
+        "description": "Özgeçmiş incelemesi, mülakat provası ve 140+ işe alım partnerimizle tanıştırma."
+      },
+      "flexibleFormat": {
+        "title": "Esnek formatlar",
+        "description": "Online, hibrit ya da yüz yüze — hayatına uyanı seç."
+      },
+      "certificate": {
+        "title": "Tamamlama sertifikası",
+        "description": "Doğrulanabilir bir sertifika ve işverenlere gösterebileceğin bir portfolyo ile mezun ol."
+      }
+    },
+    "howItWorks": {
+      "title": "Nasıl çalışır",
+      "apply": {
+        "title": "Başvur",
+        "description": "Kısa bir başvuru gönder — başlangıç seviyesi programlar için kodlama deneyimi gerekmez."
+      },
+      "meetAdvisor": {
+        "title": "Bir danışmanla görüş",
+        "description": "Sana uygun bootcamp ve formatı bulmak için 20 dakikalık bir görüşme."
+      },
+      "learn": {
+        "title": "Öğren",
+        "description": "Canlı dersler, projeler ve birebir mentorluk için grubuna katıl."
+      },
+      "graduate": {
+        "title": "Mezun ol ve işe gir",
+        "description": "Portfolyo, sertifika ve iş bulana kadar süren kariyer desteğiyle mezun ol."
+      }
+    },
     "stats": {
       "graduates": "Mezun",
       "employmentRate": "6 ay içinde işe yerleşiyor",
