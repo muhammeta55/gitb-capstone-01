@@ -1,21 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { usePathname } from "@/i18n/navigation";
+
+function getInitialTheme(): boolean {
+  if (typeof window === "undefined") return false;
+  return localStorage.getItem("theme") === "dark";
+}
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(getInitialTheme);
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- required here: localStorage is a browser-only API, so this mounted-check pattern is the standard way to avoid SSR/client hydration mismatches (see B-02 ticket notes)
     setMounted(true);
-    setIsDark(localStorage.getItem("theme") === "dark");
   }, []);
+
+  useLayoutEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark, pathname]);
 
   function toggleTheme() {
     const next = !isDark;
     setIsDark(next);
-    document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
   }
 
