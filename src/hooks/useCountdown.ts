@@ -8,9 +8,10 @@ export interface Countdown {
   hours: number;
   minutes: number;
   seconds: number;
+  ready: boolean; // client'ta gerçek değer hesaplanana kadar false
 }
 
-function calculate(targetDate: string): Countdown {
+function calculate(targetDate: string): Omit<Countdown, "ready"> {
   const target = new Date(targetDate).getTime();
   const now = Date.now();
   const diff = target - now;
@@ -27,16 +28,25 @@ function calculate(targetDate: string): Countdown {
   return { hasStarted: false, days, hours, minutes, seconds };
 }
 
+// Sunucu ve istemcinin ilk render'da üretmesi gereken ortak, sabit değer.
+// Gerçek sayı burada değil, sadece useEffect'te (client-only) hesaplanır.
+const INITIAL: Countdown = {
+  hasStarted: false,
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+  ready: false,
+};
+
 export function useCountdown(targetDate: string): Countdown {
-  const [countdown, setCountdown] = useState<Countdown>(() => calculate(targetDate));
+  const [countdown, setCountdown] = useState<Countdown>(INITIAL);
 
   useEffect(() => {
-    // targetDate değiştiyse ilk değeri anında tazele (döngü değil, tek seferlik senkronizasyon)
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCountdown(calculate(targetDate));
+    setCountdown({ ...calculate(targetDate), ready: true });
 
     const interval = setInterval(() => {
-      setCountdown(calculate(targetDate));
+      setCountdown({ ...calculate(targetDate), ready: true });
     }, 1000);
 
     return () => clearInterval(interval);

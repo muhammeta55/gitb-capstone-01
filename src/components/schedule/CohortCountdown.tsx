@@ -9,7 +9,22 @@ interface Props {
 
 export function CohortCountdown({ startDate }: Props) {
   const t = useTranslations("schedulePage");
-  const { hasStarted, days, hours, minutes, seconds } = useCountdown(startDate);
+  const { ready, hasStarted, days, hours, minutes, seconds } = useCountdown(startDate);
+
+  if (!ready) {
+    // Sunucu ve istemcinin ilk render'da eşleşmesi için sabit placeholder
+    return (
+      <div className="flex items-center gap-2 font-mono text-sm opacity-0" aria-hidden="true">
+        <TimeUnit value={0} label={t("days")} />
+        <span>:</span>
+        <TimeUnit value={0} label={t("hours")} />
+        <span>:</span>
+        <TimeUnit value={0} label={t("minutes")} />
+        <span>:</span>
+        <TimeUnit value={0} label={t("seconds")} />
+      </div>
+    );
+  }
 
   if (hasStarted) {
     return (
