@@ -55,7 +55,6 @@
         "description": "Graduate with a verifiable certificate and a portfolio you can show employers."
       }
     },
-
     "howItWorks": {
       "title": "How it works",
       "apply": {
@@ -75,7 +74,12 @@
         "description": "Walk away with a portfolio, a certificate, and career support until you land a job."
       }
     },
-
+    "instructors": {
+      "title": "Learn from people who ship"
+    },
+    "testimonials": {
+      "title": "What our graduates say"
+    },
     "pricing": {
       "title": "Simple, transparent pricing",
       "mostPopular": "Most popular",

@@ -16,7 +16,18 @@
       "ctaPrimary": "Bootcamp'leri keşfet",
       "ctaSecondary": "Bir danışmanla konuş"
     },
-
+    "stats": {
+      "graduates": "Mezun",
+      "employmentRate": "6 ay içinde işe yerleşiyor",
+      "partners": "İşe alım partneri"
+    },
+    "featured": {
+      "title": "Öne çıkan programlar"
+    },
+    "categories": {
+      "title": "Kategoriye göre keşfet",
+      "courseCount": "{count} program"
+    },
     "features": {
       "title": "Neden GITBootcamp",
       "liveClasses": {
@@ -63,19 +74,12 @@
         "description": "Portfolyo, sertifika ve iş bulana kadar süren kariyer desteğiyle mezun ol."
       }
     },
-    "stats": {
-      "graduates": "Mezun",
-      "employmentRate": "6 ay içinde işe yerleşiyor",
-      "partners": "İşe alım partneri"
+    "instructors": {
+      "title": "Sahada çalışanlardan öğren"
     },
-    "featured": {
-      "title": "Öne çıkan programlar"
+    "testimonials": {
+      "title": "Mezunlarımız ne diyor"
     },
-    "categories": {
-      "title": "Kategoriye göre keşfet",
-      "courseCount": "{count} program"
-    },
-
     "pricing": {
       "title": "Basit, şeffaf fiyatlandırma",
       "mostPopular": "En popüler",
