@@ -23,6 +23,13 @@
       "employmentRate": "6 ay içinde işe yerleşiyor",
       "partnersValue": "140+",
       "partners": "İşe alım partneri"
+    },
+    "featured": {
+      "title": "Öne çıkan programlar"
+    },
+    "categories": {
+      "title": "Kategoriye göre keşfet",
+      "courseCount": "{count} program"
     }
   },
   "footer": {

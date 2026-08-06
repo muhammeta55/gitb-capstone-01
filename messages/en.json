@@ -23,6 +23,13 @@
       "employmentRate": "Employed within 6 months",
       "partnersValue": "140+",
       "partners": "Hiring partners"
+    },
+    "featured": {
+      "title": "Featured programs"
+    },
+    "categories": {
+      "title": "Explore by category",
+      "courseCount": "{count} programs"
     }
   },
   "footer": {
