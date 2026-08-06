@@ -1,0 +1,68 @@
+import { Instructor } from "@/types";
+
+export const instructors: Instructor[] = [
+  {
+    slug: "lena-hoffman",
+    name: "Lena Hoffman",
+    title: "Senior Frontend Engineer",
+    bio: "Lena has spent the last 8 years building large-scale React applications, most recently leading the frontend platform team at a Berlin-based fintech.",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300",
+    company: "Previously at N26",
+  },
+  {
+    slug: "marco-dias",
+    name: "Marco Dias",
+    title: "Lead Data Scientist",
+    bio: "Marco has built ML pipelines for retail forecasting and recommendation systems, and has taught data science part-time for the past 4 years.",
+    avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=300",
+    company: "Previously at Zalando",
+  },
+  {
+    slug: "amira-saad",
+    name: "Amira Saad",
+    title: "Product Design Lead",
+    bio: "Amira has led design teams at two Series B startups and specializes in design systems that scale across large product suites.",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300",
+    company: "Previously at Adyen",
+  },
+  {
+    slug: "jan-de-vries",
+    name: "Jan de Vries",
+    title: "Principal DevOps Engineer",
+    bio: "Jan has architected cloud infrastructure for high-traffic platforms and is a certified AWS Solutions Architect with a decade of on-call experience.",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300",
+    company: "Previously at Booking.com",
+  },
+  {
+    slug: "priya-nair",
+    name: "Priya Nair",
+    title: "Security Engineer",
+    bio: "Priya works in application security and has run internal red-team exercises for financial institutions across Europe.",
+    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300",
+    company: "Previously at ING",
+  },
+  {
+    slug: "tomasz-nowak",
+    name: "Tomasz Nowak",
+    title: "Mobile Engineering Lead",
+    bio: "Tomasz has shipped consumer apps used by millions, with deep experience in both native and React Native development.",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300",
+    company: "Previously at Bolt",
+  },
+  {
+    slug: "sophie-laurent",
+    name: "Sophie Laurent",
+    title: "Growth Marketing Manager",
+    bio: "Sophie has run performance marketing campaigns across SaaS and e-commerce, with a focus on data-driven acquisition strategy.",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654957?w=300",
+    company: "Previously at Adyen",
+  },
+  {
+    slug: "daniel-osei",
+    name: "Daniel Osei",
+    title: "Senior Product Manager",
+    bio: "Daniel has taken multiple B2B products from zero to launch and mentors early-career PMs on discovery and roadmapping.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300",
+    company: "Previously at Mollie",
+  },
+];
