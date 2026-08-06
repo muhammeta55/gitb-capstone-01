@@ -4,6 +4,8 @@ import { FeaturedPrograms } from "@/components/landing/FeaturedPrograms";
 import { CategoryGrid } from "@/components/landing/CategoryGrid";
 import { Features } from "@/components/landing/Features";
 import { HowItWorks } from "@/components/landing/HowItWorks";
+import { Instructors } from "@/components/landing/Instructors";
+import { Testimonials } from "@/components/landing/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <CategoryGrid />
       <Features />
       <HowItWorks />
+      <Instructors />
+      <Testimonials />
     </>
   );
 }
