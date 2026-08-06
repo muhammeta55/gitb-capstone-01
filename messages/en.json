@@ -9,6 +9,22 @@
     "about": "About",
     "contact": "Contact"
   },
+  "landing": {
+    "hero": {
+      "title": "Code your way into tech — in 12 weeks, not 4 years.",
+      "subtitle": "Live, project-based bootcamps in web development, data, and product design — taught by engineers who still ship code.",
+      "ctaPrimary": "Explore bootcamps",
+      "ctaSecondary": "Talk to an advisor"
+    },
+    "stats": {
+      "graduatesValue": "3,200+",
+      "graduates": "Graduates",
+      "employmentRateValue": "91%",
+      "employmentRate": "Employed within 6 months",
+      "partnersValue": "140+",
+      "partners": "Hiring partners"
+    }
+  },
   "footer": {
     "brandName": "GITBootcamp",
     "tagline": "Practical bootcamps to launch your tech career.",

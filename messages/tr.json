@@ -9,6 +9,22 @@
     "about": "Hakkımızda",
     "contact": "İletişim"
   },
+  "landing": {
+    "hero": {
+      "title": "Teknolojiye 4 yılda değil, 12 haftada adım at.",
+      "subtitle": "Web geliştirme, veri ve ürün tasarımı alanlarında canlı, proje tabanlı bootcamp'ler — hâlâ kod yazan mühendisler tarafından veriliyor.",
+      "ctaPrimary": "Bootcamp'leri keşfet",
+      "ctaSecondary": "Bir danışmanla konuş"
+    },
+    "stats": {
+      "graduatesValue": "3.200+",
+      "graduates": "Mezun",
+      "employmentRateValue": "%91",
+      "employmentRate": "6 ay içinde işe yerleşiyor",
+      "partnersValue": "140+",
+      "partners": "İşe alım partneri"
+    }
+  },
   "footer": {
     "brandName": "GITBootcamp",
     "tagline": "Teknoloji kariyerinizi başlatacak pratik bootcamp'ler.",
