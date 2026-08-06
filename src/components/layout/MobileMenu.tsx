@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -97,6 +99,11 @@ export function MobileMenu() {
                 </Link>
               ))}
             </nav>
+
+            <div className="flex items-center gap-3">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
 
             <Button size="sm" className="mt-auto">
               Sign Up
