@@ -7,9 +7,9 @@ export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- required here: localStorage is a browser-only API, so this mounted-check pattern is the standard way to avoid SSR/client hydration mismatches (see B-02 ticket notes)
     setMounted(true);
-    const stored = localStorage.getItem("theme");
-    setIsDark(stored === "dark");
+    setIsDark(localStorage.getItem("theme") === "dark");
   }, []);
 
   function toggleTheme() {
