@@ -247,5 +247,33 @@
       "passwordMismatch": "Şifreler eşleşmiyor",
       "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz"
     }
+  },
+
+  "contactPage": {
+    "title": "Bize ulaşın",
+    "subtitle": "Bootcamp'ler, iş birlikleri ya da başka bir konu hakkında — her mesajı okuyoruz.",
+    "form": {
+      "nameLabel": "Ad",
+      "emailLabel": "E-posta",
+      "subjectLabel": "Konu",
+      "messageLabel": "Mesaj",
+      "submit": "Mesaj gönder",
+      "submitting": "Gönderiliyor...",
+      "successTitle": "Mesaj gönderildi",
+      "successDescription": "Ulaştığın için teşekkürler — bir iş günü içinde sana geri döneceğiz.",
+      "errors": {
+        "required": "Bu alan zorunludur.",
+        "invalidEmail": "Geçerli bir e-posta adresi gir.",
+        "messageTooShort": "Mesaj en az {count} karakter olmalı."
+      }
+    },
+    "info": {
+      "title": "Bize ulaşmanın diğer yolları",
+      "emailLabel": "E-posta",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Adres",
+      "hoursLabel": "Çalışma saatleri",
+      "hoursValue": "Pzt–Cum, 9:00–18:00 CET"
+    }
   }
 }

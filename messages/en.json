@@ -247,5 +247,33 @@
       "passwordMismatch": "Passwords do not match",
       "termsRequired": "You must agree to the Terms of Service"
     }
+  },
+
+  "contactPage": {
+    "title": "Get in touch",
+    "subtitle": "Questions about a bootcamp, partnerships, or anything else — we read every message.",
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "subjectLabel": "Subject",
+      "messageLabel": "Message",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successTitle": "Message sent",
+      "successDescription": "Thanks for reaching out — we'll get back to you within one business day.",
+      "errors": {
+        "required": "This field is required.",
+        "invalidEmail": "Enter a valid email address.",
+        "messageTooShort": "Message must be at least {count} characters."
+      }
+    },
+    "info": {
+      "title": "Other ways to reach us",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "hoursLabel": "Office hours",
+      "hoursValue": "Mon–Fri, 9:00–18:00 CET"
+    }
   }
 }
