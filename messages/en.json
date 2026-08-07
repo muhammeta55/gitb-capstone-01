@@ -1,6 +1,6 @@
 {
   "common": {
-    "signUp": "Sign Up"
+    "signIn": "Sign In"
   },
   "nav": {
     "home": "Home",
@@ -208,6 +208,8 @@
     }
   },
   "loginPage": {
+    "noAccount": "Don't have an account?",
+    "signUpLink": "Sign up",
     "title": "Login",
     "subtitle": "Welcome back, sign in to continue.",
     "email": "Email",
@@ -223,6 +225,8 @@
     }
   },
   "registerPage": {
+    "hasAccount": "Already have an account?",
+    "signInLink": "Sign in",
     "title": "Register",
     "subtitle": "Create an account to get started.",
     "name": "Full name",

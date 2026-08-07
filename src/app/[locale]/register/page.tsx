@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Checkbox } from "@/components/ui/Checkbox";
+import { Link } from "@/i18n/navigation";
 
 type StrengthLevel = "weak" | "medium" | "strong";
 
@@ -187,6 +188,13 @@ export default function RegisterPage() {
             {t("submit")}
           </Button>
         </form>
+
+        <p className="text-center text-sm text-muted">
+          {t("hasAccount")}{" "}
+          <Link href="/login" className="text-primary hover:underline font-medium">
+            {t("signInLink")}
+          </Link>
+        </p>
       </Card>
     </main>
   );
