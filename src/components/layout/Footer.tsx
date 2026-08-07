@@ -55,8 +55,8 @@ export function Footer() {
     {
       title: t("columnAccount"),
       links: [
-        { href: "/auth/login", label: t("login") },
-        { href: "/auth/register", label: t("register") },
+        { href: "/login", label: t("login") },
+        { href: "/register", label: t("register") },
       ],
     },
   ];

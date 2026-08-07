@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { Link } from "@/i18n/navigation";
 
 const MOCK_EMAIL = "test@test.com";
 const MOCK_PASSWORD = "123456";
@@ -105,6 +106,13 @@ export default function LoginPage() {
             {t("submit")}
           </Button>
         </form>
+
+        <p className="text-center text-sm text-muted">
+          {t("noAccount")}{" "}
+          <Link href="/register" className="text-primary hover:underline font-medium">
+            {t("signUpLink")}
+          </Link>
+        </p>
       </Card>
     </main>
   );

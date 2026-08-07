@@ -1,6 +1,6 @@
 {
   "common": {
-    "signUp": "Kayıt Ol"
+    "signIn": "Giriş Yap"
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -208,6 +208,8 @@
     }
   },
   "loginPage": {
+    "noAccount": "Hesabın yok mu?",
+    "signUpLink": "Kayıt ol",
     "title": "Giriş Yap",
     "subtitle": "Tekrar hoş geldin, devam etmek için giriş yap.",
     "email": "E-posta",
@@ -223,6 +225,8 @@
     }
   },
   "registerPage": {
+    "hasAccount": "Zaten hesabın var mı?",
+    "signInLink": "Giriş yap",
     "title": "Kayıt Ol",
     "subtitle": "Başlamak için bir hesap oluştur.",
     "name": "Ad Soyad",

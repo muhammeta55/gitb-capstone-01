@@ -39,7 +39,9 @@ export function Header() {
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
           <ThemeToggle />
-          <Button size="sm">{tCommon("signUp")}</Button>
+          <Link href="/login">
+            <Button size="sm">{tCommon("signIn")}</Button>
+          </Link>
         </div>
 
         <MobileMenu />

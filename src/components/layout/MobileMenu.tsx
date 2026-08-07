@@ -1,29 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/bootcamps", label: "Bootcamps" },
-  { href: "/schedule", label: "Schedule" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
 export function MobileMenu() {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const [isOpen, setIsOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Close on Escape + trap focus inside panel while open
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/bootcamps", label: t("bootcamps") },
+    { href: "/schedule", label: t("schedule") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
+
   useEffect(() => {
     if (!isOpen) return;
 
-    // Move focus into the panel as soon as it opens
     closeButtonRef.current?.focus();
 
     function handleKeyDown(e: KeyboardEvent) {
@@ -105,9 +106,11 @@ export function MobileMenu() {
               <ThemeToggle />
             </div>
 
-            <Button size="sm" className="mt-auto">
-              Sign Up
-            </Button>
+            <Link href="/login" onClick={() => setIsOpen(false)} className="mt-auto">
+              <Button size="sm" className="w-full">
+                {tCommon("signIn")}
+              </Button>
+            </Link>
           </div>
         </div>
       )}

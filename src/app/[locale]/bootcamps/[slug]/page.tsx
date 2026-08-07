@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
 
+export const dynamic = "force-static";
+
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
