@@ -143,6 +143,27 @@
       "advanced": "Advanced"
     }
   },
+  
+  "bootcampDetail": {
+  "about": "About this bootcamp",
+  "curriculum": "Curriculum",
+  "curriculumEmpty": "Curriculum details coming soon.",
+  "weeks": "weeks",
+  "nextCohort": "Next cohort",
+  "seatsLeft": "Seats left",
+  "enroll": "Enroll now",
+  "level": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "format": {
+    "online": "Online",
+    "hybrid": "Hybrid",
+    "onsite": "Onsite"
+  } 
+ },
+
   "schedulePage": {
     "title": "Schedule",
     "subtitle": "View upcoming cohorts and their start dates.",
