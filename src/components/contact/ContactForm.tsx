@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { Spinner } from "@/components/ui/Spinner";
+import { Button } from "@/components/ui/Button";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_MESSAGE_LENGTH = 20;
@@ -114,10 +115,10 @@ export function ContactForm() {
         error={errors.message}
         rows={5}
       />
-      <button
+      <Button
         type="submit"
         disabled={status === "loading"}
-        className="flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 font-medium text-background hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-2"
       >
         {status === "loading" && (
           <Spinner
@@ -126,7 +127,7 @@ export function ContactForm() {
           />
         )}
         {status === "loading" ? t("submitting") : t("submit")}
-      </button>
+      </Button>
     </form>
   );
 }
