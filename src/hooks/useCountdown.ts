@@ -43,6 +43,7 @@ export function useCountdown(targetDate: string): Countdown {
   const [countdown, setCountdown] = useState<Countdown>(INITIAL);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- required: INITIAL is a fixed SSR-safe placeholder so server and client render identically on first paint; the real countdown can only be computed client-side, so it's synced here deliberately, not accidentally
     setCountdown({ ...calculate(targetDate), ready: true });
 
     const interval = setInterval(() => {
