@@ -143,6 +143,17 @@
       "advanced": "Advanced"
     }
   },
+  
+  "bootcampDetail": {
+  "about": "About this bootcamp",
+  "curriculum": "Curriculum",
+  "curriculumEmpty": "Curriculum details coming soon.",
+  "weeks": "weeks",
+  "nextCohort": "Next cohort",
+  "seatsLeft": "Seats left",
+  "enroll": "Enroll now"
+ },
+
   "schedulePage": {
     "title": "Schedule",
     "subtitle": "View upcoming cohorts and their start dates.",

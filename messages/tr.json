@@ -143,6 +143,18 @@
       "advanced": "İleri"
     }
   },
+  
+  "bootcampDetail": {
+  "about": "Bu bootcamp hakkında",
+  "curriculum": "Müfredat",
+  "curriculumEmpty": "Müfredat detayları yakında eklenecek.",
+  "weeks": "hafta",
+  "nextCohort": "Sıradaki dönem",
+  "seatsLeft": "Kalan kontenjan",
+  "enroll": "Hemen kayıt ol"
+  },
+
+
   "schedulePage": {
     "title": "Program Takvimi",
     "subtitle": "Yaklaşan kohortları ve başlangıç tarihlerini görün.",
