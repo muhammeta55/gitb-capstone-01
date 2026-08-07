@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -54,12 +55,9 @@ export function Newsletter() {
                 error={error ?? undefined}
               />
             </div>
-            <button
-              type="submit"
-              className="h-10 w-full shrink-0 rounded-md bg-primary px-6 font-medium text-background hover:opacity-90 sm:w-auto"
-            >
+            <Button type="submit" className="h-10 w-full shrink-0 sm:w-auto">
               {t("submit")}
-            </button>
+            </Button>
           </form>
         )}
       </div>
