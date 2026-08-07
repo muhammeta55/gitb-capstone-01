@@ -143,6 +143,25 @@
       "advanced": "İleri"
     }
   },
+  "bootcampDetail": {
+    "about": "Bu bootcamp hakkında",
+    "curriculum": "Müfredat",
+    "curriculumEmpty": "Müfredat detayları yakında eklenecek.",
+    "weeks": "hafta",
+    "nextCohort": "Sıradaki dönem",
+    "seatsLeft": "Kalan kontenjan",
+    "enroll": "Hemen kayıt ol",
+    "level": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
+    },
+    "format": {
+      "online": "Çevrimiçi",
+      "hybrid": "Hibrit",
+      "onsite": "Yüz yüze"
+    }
+  },
   "schedulePage": {
     "title": "Program Takvimi",
     "subtitle": "Yaklaşan kohortları ve başlangıç tarihlerini görün.",
@@ -186,6 +205,47 @@
     },
     "partners": {
       "title": "Şu ekiplerin güvendiği"
+    }
+  },
+  "loginPage": {
+    "title": "Giriş Yap",
+    "subtitle": "Tekrar hoş geldin, devam etmek için giriş yap.",
+    "email": "E-posta",
+    "password": "Şifre",
+    "showPassword": "Şifreyi göster",
+    "hidePassword": "Şifreyi gizle",
+    "submit": "Giriş yap",
+    "success": "Giriş başarılı!",
+    "errors": {
+      "emailRequired": "E-posta zorunludur",
+      "passwordRequired": "Şifre zorunludur",
+      "invalidCredentials": "E-posta veya şifre hatalı"
+    }
+  },
+  "registerPage": {
+    "title": "Kayıt Ol",
+    "subtitle": "Başlamak için bir hesap oluştur.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifre tekrar",
+    "showPassword": "Şifreyi göster",
+    "hidePassword": "Şifreyi gizle",
+    "agreeToTerms": "Kullanım Koşulları'nı kabul ediyorum",
+    "submit": "Hesap oluştur",
+    "success": "Hesap başarıyla oluşturuldu!",
+    "strength": {
+      "weak": "Zayıf",
+      "medium": "Orta",
+      "strong": "Güçlü"
+    },
+    "errors": {
+      "nameRequired": "Ad soyad zorunludur",
+      "emailRequired": "E-posta zorunludur",
+      "passwordRequired": "Şifre zorunludur",
+      "confirmPasswordRequired": "Lütfen şifrenizi tekrar girin",
+      "passwordMismatch": "Şifreler eşleşmiyor",
+      "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz"
     }
   }
 }

@@ -46,3 +46,12 @@ export function filterBootcamps(bootcamps: Bootcamp[], filters: Filters): Bootca
       return result.sort((a, b) => b.studentCount - a.studentCount);
   }
 }
+
+
+export function getBootcampBySlug(bootcamps: Bootcamp[], slug: string): Bootcamp | undefined {
+  return bootcamps.find((b) => b.slug === slug);
+}
+
+export function getAllBootcampSlugs(bootcamps: Bootcamp[]): string[] {
+  return bootcamps.map((b) => b.slug);
+}
