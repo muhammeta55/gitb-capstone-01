@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { bootcamps } from "@/data/bootcamps";
 import { cohorts } from "@/data/cohorts";
@@ -19,7 +18,7 @@ export function generateStaticParams() {
 }
 
 export default async function BootcampDetailPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const bootcamp = getBootcampBySlug(bootcamps, slug);
 
   if (!bootcamp) {
@@ -47,8 +46,8 @@ export default async function BootcampDetailPage({ params }: PageProps) {
     <main className="max-w-7xl mx-auto px-4 py-10">
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <Badge variant="muted">{bootcamp.level}</Badge>
-          <Badge variant="muted">{bootcamp.format}</Badge>
+          <Badge variant="muted">{t(`level.${bootcamp.level}`)}</Badge>
+          <Badge variant="muted">{t(`format.${bootcamp.format}`)}</Badge>
         </div>
         <h1 className="text-3xl font-bold">{bootcamp.title}</h1>
         <p className="text-muted mt-2">{bootcamp.shortDescription}</p>
@@ -93,7 +92,11 @@ export default async function BootcampDetailPage({ params }: PageProps) {
                 {upcomingCohort && (
                   <>
                     <div>
-                      {t("nextCohort")}: {new Date(upcomingCohort.startDate).toLocaleDateString()}
+                      {t("nextCohort")}: {new Date(upcomingCohort.startDate).toLocaleDateString(locale, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
                     </div>
                     <div>
                       {t("seatsLeft")}: {upcomingCohort.seatsLeft}/{upcomingCohort.seatsTotal}

@@ -151,7 +151,17 @@
   "weeks": "weeks",
   "nextCohort": "Next cohort",
   "seatsLeft": "Seats left",
-  "enroll": "Enroll now"
+  "enroll": "Enroll now",
+  "level": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "format": {
+    "online": "Online",
+    "hybrid": "Hybrid",
+    "onsite": "Onsite"
+  } 
  },
 
   "schedulePage": {

@@ -151,9 +151,18 @@
   "weeks": "hafta",
   "nextCohort": "Sıradaki dönem",
   "seatsLeft": "Kalan kontenjan",
-  "enroll": "Hemen kayıt ol"
+  "enroll": "Hemen kayıt ol",
+  "level": {
+    "beginner": "Başlangıç",
+    "intermediate": "Orta",
+    "advanced": "İleri"
   },
-
+  "format": {
+    "online": "Çevrimiçi",
+    "hybrid": "Hibrit",
+    "onsite": "Sürdürülebilir"
+  }
+ },
 
   "schedulePage": {
     "title": "Program Takvimi",
