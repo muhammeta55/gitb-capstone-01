@@ -152,5 +152,40 @@
     "minutes": "minutes",
     "seconds": "seconds",
     "seatsLeft": "{count} seats left"
+  },
+  "about": {
+    "mission": {
+      "title": "Our mission",
+      "description": "We believe a career change shouldn't take four years and a mountain of debt. GITBootcamp exists to get people from zero to hired, through live teaching, real projects, and honest career support."
+    },
+    "team": {
+      "title": "Meet the team"
+    },
+    "timeline": {
+      "title": "Our story",
+      "founded": {
+        "year": "2019",
+        "title": "GITBootcamp is founded",
+        "description": "Started in Amsterdam with a single part-time web development course and 12 students."
+      },
+      "firstCohort": {
+        "year": "2020",
+        "title": "First full-time cohort",
+        "description": "Launched our first full-time, live cohort model — and our first job-placement support program."
+      },
+      "expansion": {
+        "year": "2022",
+        "title": "European expansion",
+        "description": "Opened remote-first cohorts across the EU, adding data and product design tracks."
+      },
+      "today": {
+        "year": "Today",
+        "title": "3,200+ graduates and counting",
+        "description": "A growing network of alumni working at startups and scale-ups across Europe."
+      }
+    },
+    "partners": {
+      "title": "Trusted by teams at"
+    }
   }
 }

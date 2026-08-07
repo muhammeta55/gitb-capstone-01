@@ -152,5 +152,40 @@
     "minutes": "dk",
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
+  },
+  "about": {
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Kariyer değişikliğinin dört yıl sürmesi ve dağlar kadar borç gerektirmesi gerektiğine inanmıyoruz. GITBootcamp, insanları sıfırdan işe alınmaya canlı eğitim, gerçek projeler ve dürüst kariyer desteğiyle taşımak için var."
+    },
+    "team": {
+      "title": "Ekiple tanışın"
+    },
+    "timeline": {
+      "title": "Hikayemiz",
+      "founded": {
+        "year": "2019",
+        "title": "GITBootcamp kuruldu",
+        "description": "Amsterdam'da tek bir yarı zamanlı web geliştirme kursu ve 12 öğrenciyle başladı."
+      },
+      "firstCohort": {
+        "year": "2020",
+        "title": "İlk tam zamanlı dönem",
+        "description": "İlk tam zamanlı, canlı grup modelimizi ve ilk işe yerleştirme destek programımızı başlattık."
+      },
+      "expansion": {
+        "year": "2022",
+        "title": "Avrupa'ya açılım",
+        "description": "AB genelinde uzaktan öncelikli gruplar açtık, veri ve ürün tasarımı alanlarını ekledik."
+      },
+      "today": {
+        "year": "Bugün",
+        "title": "3.200+ mezun ve artıyor",
+        "description": "Avrupa genelinde startuplarda ve büyüyen şirketlerde çalışan, gitgide büyüyen bir mezun ağı."
+      }
+    },
+    "partners": {
+      "title": "Şu ekiplerin güvendiği"
+    }
   }
 }
