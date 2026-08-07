@@ -19,8 +19,8 @@ export function BootcampCard({ bootcamp }: BootcampCardProps) {
   const t = useTranslations("bootcampCard");
 
   return (
-    <Link href={`/bootcamps/${bootcamp.slug}`} className="block group">
-      <Card className="overflow-hidden p-0 transition-shadow hover:shadow-lg">
+    <Link href={`/bootcamps/${bootcamp.slug}`} className="block group h-full">
+      <Card className="h-full flex flex-col overflow-hidden p-0 transition-shadow hover:shadow-lg">
         <div className="relative h-48 w-full">
           <Image
             src={bootcamp.heroImage}
@@ -30,7 +30,7 @@ export function BootcampCard({ bootcamp }: BootcampCardProps) {
             className="object-cover"
           />
         </div>
-        <div className="p-4 space-y-2">
+        <div className="p-4 space-y-2 flex-1 flex flex-col">
           <div className="flex items-center gap-2">
             <Badge variant={levelVariant[bootcamp.level]}>
               {t(`level.${bootcamp.level}`)}
@@ -43,7 +43,7 @@ export function BootcampCard({ bootcamp }: BootcampCardProps) {
           <p className="text-sm text-muted line-clamp-2">
             {bootcamp.shortDescription}
           </p>
-          <div className="flex items-center justify-between pt-2 text-sm">
+          <div className="flex items-center justify-between pt-2 text-sm mt-auto">
             <span>{bootcamp.durationWeeks} {t("weeks")}</span>
             <span className="font-semibold">€{bootcamp.priceEUR}</span>
           </div>
