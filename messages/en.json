@@ -143,27 +143,25 @@
       "advanced": "Advanced"
     }
   },
-  
   "bootcampDetail": {
-  "about": "About this bootcamp",
-  "curriculum": "Curriculum",
-  "curriculumEmpty": "Curriculum details coming soon.",
-  "weeks": "weeks",
-  "nextCohort": "Next cohort",
-  "seatsLeft": "Seats left",
-  "enroll": "Enroll now",
-  "level": {
-    "beginner": "Beginner",
-    "intermediate": "Intermediate",
-    "advanced": "Advanced"
+    "about": "About this bootcamp",
+    "curriculum": "Curriculum",
+    "curriculumEmpty": "Curriculum details coming soon.",
+    "weeks": "weeks",
+    "nextCohort": "Next cohort",
+    "seatsLeft": "Seats left",
+    "enroll": "Enroll now",
+    "level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "format": {
+      "online": "Online",
+      "hybrid": "Hybrid",
+      "onsite": "Onsite"
+    }
   },
-  "format": {
-    "online": "Online",
-    "hybrid": "Hybrid",
-    "onsite": "Onsite"
-  } 
- },
-
   "schedulePage": {
     "title": "Schedule",
     "subtitle": "View upcoming cohorts and their start dates.",
@@ -174,7 +172,41 @@
     "seconds": "seconds",
     "seatsLeft": "{count} seats left"
   },
-  
+  "about": {
+    "mission": {
+      "title": "Our mission",
+      "description": "We believe a career change shouldn't take four years and a mountain of debt. GITBootcamp exists to get people from zero to hired, through live teaching, real projects, and honest career support."
+    },
+    "team": {
+      "title": "Meet the team"
+    },
+    "timeline": {
+      "title": "Our story",
+      "founded": {
+        "year": "2019",
+        "title": "GITBootcamp is founded",
+        "description": "Started in Amsterdam with a single part-time web development course and 12 students."
+      },
+      "firstCohort": {
+        "year": "2020",
+        "title": "First full-time cohort",
+        "description": "Launched our first full-time, live cohort model — and our first job-placement support program."
+      },
+      "expansion": {
+        "year": "2022",
+        "title": "European expansion",
+        "description": "Opened remote-first cohorts across the EU, adding data and product design tracks."
+      },
+      "today": {
+        "year": "Today",
+        "title": "3,200+ graduates and counting",
+        "description": "A growing network of alumni working at startups and scale-ups across Europe."
+      }
+    },
+    "partners": {
+      "title": "Trusted by teams at"
+    }
+  },
   "loginPage": {
     "title": "Login",
     "subtitle": "Welcome back, sign in to continue.",
@@ -190,31 +222,30 @@
       "invalidCredentials": "Invalid email or password"
     }
   },
-  
   "registerPage": {
-  "title": "Register",
-  "subtitle": "Create an account to get started.",
-  "name": "Full name",
-  "email": "Email",
-  "password": "Password",
-  "confirmPassword": "Confirm password",
-  "showPassword": "Show password",
-  "hidePassword": "Hide password",
-  "agreeToTerms": "I agree to the Terms of Service",
-  "submit": "Create account",
-  "success": "Account created successfully!",
-  "strength": {
-    "weak": "Weak",
-    "medium": "Medium",
-    "strong": "Strong"
-  },
-  "errors": {
-    "nameRequired": "Name is required",
-    "emailRequired": "Email is required",
-    "passwordRequired": "Password is required",
-    "confirmPasswordRequired": "Please confirm your password",
-    "passwordMismatch": "Passwords do not match",
-    "termsRequired": "You must agree to the Terms of Service"
+    "title": "Register",
+    "subtitle": "Create an account to get started.",
+    "name": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "agreeToTerms": "I agree to the Terms of Service",
+    "submit": "Create account",
+    "success": "Account created successfully!",
+    "strength": {
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong"
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordMismatch": "Passwords do not match",
+      "termsRequired": "You must agree to the Terms of Service"
     }
   }
 }

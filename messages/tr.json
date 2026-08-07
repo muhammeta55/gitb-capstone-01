@@ -143,27 +143,25 @@
       "advanced": "İleri"
     }
   },
-  
   "bootcampDetail": {
-  "about": "Bu bootcamp hakkında",
-  "curriculum": "Müfredat",
-  "curriculumEmpty": "Müfredat detayları yakında eklenecek.",
-  "weeks": "hafta",
-  "nextCohort": "Sıradaki dönem",
-  "seatsLeft": "Kalan kontenjan",
-  "enroll": "Hemen kayıt ol",
-  "level": {
-    "beginner": "Başlangıç",
-    "intermediate": "Orta",
-    "advanced": "İleri"
+    "about": "Bu bootcamp hakkında",
+    "curriculum": "Müfredat",
+    "curriculumEmpty": "Müfredat detayları yakında eklenecek.",
+    "weeks": "hafta",
+    "nextCohort": "Sıradaki dönem",
+    "seatsLeft": "Kalan kontenjan",
+    "enroll": "Hemen kayıt ol",
+    "level": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
+    },
+    "format": {
+      "online": "Çevrimiçi",
+      "hybrid": "Hibrit",
+      "onsite": "Yüz yüze"
+    }
   },
-  "format": {
-    "online": "Çevrimiçi",
-    "hybrid": "Hibrit",
-    "onsite": "Sürdürülebilir"
-  }
- },
-
   "schedulePage": {
     "title": "Program Takvimi",
     "subtitle": "Yaklaşan kohortları ve başlangıç tarihlerini görün.",
@@ -174,8 +172,42 @@
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
   },
-
-"loginPage": {
+  "about": {
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Kariyer değişikliğinin dört yıl sürmesi ve dağlar kadar borç gerektirmesi gerektiğine inanmıyoruz. GITBootcamp, insanları sıfırdan işe alınmaya canlı eğitim, gerçek projeler ve dürüst kariyer desteğiyle taşımak için var."
+    },
+    "team": {
+      "title": "Ekiple tanışın"
+    },
+    "timeline": {
+      "title": "Hikayemiz",
+      "founded": {
+        "year": "2019",
+        "title": "GITBootcamp kuruldu",
+        "description": "Amsterdam'da tek bir yarı zamanlı web geliştirme kursu ve 12 öğrenciyle başladı."
+      },
+      "firstCohort": {
+        "year": "2020",
+        "title": "İlk tam zamanlı dönem",
+        "description": "İlk tam zamanlı, canlı grup modelimizi ve ilk işe yerleştirme destek programımızı başlattık."
+      },
+      "expansion": {
+        "year": "2022",
+        "title": "Avrupa'ya açılım",
+        "description": "AB genelinde uzaktan öncelikli gruplar açtık, veri ve ürün tasarımı alanlarını ekledik."
+      },
+      "today": {
+        "year": "Bugün",
+        "title": "3.200+ mezun ve artıyor",
+        "description": "Avrupa genelinde startuplarda ve büyüyen şirketlerde çalışan, gitgide büyüyen bir mezun ağı."
+      }
+    },
+    "partners": {
+      "title": "Şu ekiplerin güvendiği"
+    }
+  },
+  "loginPage": {
     "title": "Giriş Yap",
     "subtitle": "Tekrar hoş geldin, devam etmek için giriş yap.",
     "email": "E-posta",
@@ -190,31 +222,30 @@
       "invalidCredentials": "E-posta veya şifre hatalı"
     }
   },
-  
   "registerPage": {
-  "title": "Kayıt Ol",
-  "subtitle": "Başlamak için bir hesap oluştur.",
-  "name": "Ad Soyad",
-  "email": "E-posta",
-  "password": "Şifre",
-  "confirmPassword": "Şifre tekrar",
-  "showPassword": "Şifreyi göster",
-  "hidePassword": "Şifreyi gizle",
-  "agreeToTerms": "Kullanım Koşulları'nı kabul ediyorum",
-  "submit": "Hesap oluştur",
-  "success": "Hesap başarıyla oluşturuldu!",
-  "strength": {
-    "weak": "Zayıf",
-    "medium": "Orta",
-    "strong": "Güçlü"
-  },
-  "errors": {
-    "nameRequired": "Ad soyad zorunludur",
-    "emailRequired": "E-posta zorunludur",
-    "passwordRequired": "Şifre zorunludur",
-    "confirmPasswordRequired": "Lütfen şifrenizi tekrar girin",
-    "passwordMismatch": "Şifreler eşleşmiyor",
-    "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz"
+    "title": "Kayıt Ol",
+    "subtitle": "Başlamak için bir hesap oluştur.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifre tekrar",
+    "showPassword": "Şifreyi göster",
+    "hidePassword": "Şifreyi gizle",
+    "agreeToTerms": "Kullanım Koşulları'nı kabul ediyorum",
+    "submit": "Hesap oluştur",
+    "success": "Hesap başarıyla oluşturuldu!",
+    "strength": {
+      "weak": "Zayıf",
+      "medium": "Orta",
+      "strong": "Güçlü"
+    },
+    "errors": {
+      "nameRequired": "Ad soyad zorunludur",
+      "emailRequired": "E-posta zorunludur",
+      "passwordRequired": "Şifre zorunludur",
+      "confirmPasswordRequired": "Lütfen şifrenizi tekrar girin",
+      "passwordMismatch": "Şifreler eşleşmiyor",
+      "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz"
     }
   }
 }
