@@ -14,6 +14,7 @@ export function ThemeToggle() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- required: mounted must flip only after client hydration to avoid SSR/client mismatch on the theme button
     setMounted(true);
   }, []);
 
