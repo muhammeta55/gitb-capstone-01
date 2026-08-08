@@ -172,6 +172,19 @@
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
   },
+
+  "notFoundPage": {
+  "title": "Sayfa bulunamadı",
+  "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+  "backHome": "Ana sayfaya dön",
+  "popularPages": "Ya da bu popüler sayfalara göz atın",
+  "links": {
+    "bootcamps": "Bootcamp'lere göz at",
+    "schedule": "Programı görüntüle",
+    "home": "Ana sayfa"
+  }
+},
+  
   "about": {
     "mission": {
       "title": "Misyonumuz",
