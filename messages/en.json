@@ -1,6 +1,6 @@
 {
   "common": {
-    "signUp": "Sign Up"
+    "signIn": "Sign In"
   },
   "nav": {
     "home": "Home",
@@ -143,27 +143,26 @@
       "advanced": "Advanced"
     }
   },
-  
   "bootcampDetail": {
-  "about": "About this bootcamp",
-  "curriculum": "Curriculum",
-  "curriculumEmpty": "Curriculum details coming soon.",
-  "weeks": "weeks",
-  "nextCohort": "Next cohort",
-  "seatsLeft": "Seats left",
-  "enroll": "Enroll now",
-  "level": {
-    "beginner": "Beginner",
-    "intermediate": "Intermediate",
-    "advanced": "Advanced"
+    "about": "About this bootcamp",
+    "curriculum": "Curriculum",
+    "curriculumEmpty": "Curriculum details coming soon.",
+    "weeks": "weeks",
+    "nextCohort": "Next cohort",
+    "seatsLeft": "Seats left",
+    "enroll": "Enroll now",
+    "level": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "format": {
+      "online": "Online",
+      "hybrid": "Hybrid",
+      "onsite": "Onsite"
+    }
   },
-  "format": {
-    "online": "Online",
-    "hybrid": "Hybrid",
-    "onsite": "Onsite"
-  } 
- },
-
+  
   "schedulePage": {
     "title": "Schedule",
     "subtitle": "View upcoming cohorts and their start dates.",
@@ -173,5 +172,126 @@
     "minutes": "minutes",
     "seconds": "seconds",
     "seatsLeft": "{count} seats left"
+  },
+
+  "notFoundPage": {
+  "title": "Page not found",
+  "subtitle": "The page you're looking for doesn't exist or has been moved.",
+  "backHome": "Back to home",
+  "popularPages": "Or check out these popular pages",
+  "links": {
+    "bootcamps": "Browse bootcamps",
+    "schedule": "View schedule",
+    "home": "Home"
+  }
+},
+  
+"about": {
+    "mission": {
+      "title": "Our mission",
+      "description": "We believe a career change shouldn't take four years and a mountain of debt. GITBootcamp exists to get people from zero to hired, through live teaching, real projects, and honest career support."
+    },
+    "team": {
+      "title": "Meet the team"
+    },
+    "timeline": {
+      "title": "Our story",
+      "founded": {
+        "year": "2019",
+        "title": "GITBootcamp is founded",
+        "description": "Started in Amsterdam with a single part-time web development course and 12 students."
+      },
+      "firstCohort": {
+        "year": "2020",
+        "title": "First full-time cohort",
+        "description": "Launched our first full-time, live cohort model — and our first job-placement support program."
+      },
+      "expansion": {
+        "year": "2022",
+        "title": "European expansion",
+        "description": "Opened remote-first cohorts across the EU, adding data and product design tracks."
+      },
+      "today": {
+        "year": "Today",
+        "title": "3,200+ graduates and counting",
+        "description": "A growing network of alumni working at startups and scale-ups across Europe."
+      }
+    },
+    "partners": {
+      "title": "Trusted by teams at"
+    }
+  },
+  "loginPage": {
+    "noAccount": "Don't have an account?",
+    "signUpLink": "Sign up",
+    "title": "Login",
+    "subtitle": "Welcome back, sign in to continue.",
+    "email": "Email",
+    "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "submit": "Sign in",
+    "success": "Login successful!",
+    "errors": {
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "invalidCredentials": "Invalid email or password"
+    }
+  },
+  "registerPage": {
+    "hasAccount": "Already have an account?",
+    "signInLink": "Sign in",
+    "title": "Register",
+    "subtitle": "Create an account to get started.",
+    "name": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "agreeToTerms": "I agree to the Terms of Service",
+    "submit": "Create account",
+    "success": "Account created successfully!",
+    "strength": {
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong"
+    },
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordMismatch": "Passwords do not match",
+      "termsRequired": "You must agree to the Terms of Service"
+    }
+  },
+
+  "contactPage": {
+    "title": "Get in touch",
+    "subtitle": "Questions about a bootcamp, partnerships, or anything else — we read every message.",
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "subjectLabel": "Subject",
+      "messageLabel": "Message",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successTitle": "Message sent",
+      "successDescription": "Thanks for reaching out — we'll get back to you within one business day.",
+      "errors": {
+        "required": "This field is required.",
+        "invalidEmail": "Enter a valid email address.",
+        "messageTooShort": "Message must be at least {count} characters."
+      }
+    },
+    "info": {
+      "title": "Other ways to reach us",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "hoursLabel": "Office hours",
+      "hoursValue": "Mon–Fri, 9:00–18:00 CET"
+    }
   }
 }
