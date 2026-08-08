@@ -8,6 +8,13 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
+import { Level } from "@/types";
+
+const levelVariant: Record<Level, "success" | "warning" | "error"> = {
+  beginner: "success",
+  intermediate: "warning",
+  advanced: "error",
+};
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -46,7 +53,7 @@ export default async function BootcampDetailPage({ params }: PageProps) {
     <main className="max-w-7xl mx-auto px-4 py-10">
       <div className="mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <Badge variant="muted">{t(`level.${bootcamp.level}`)}</Badge>
+          <Badge variant={levelVariant[bootcamp.level]}>{t(`level.${bootcamp.level}`)}</Badge>
           <Badge variant="muted">{t(`format.${bootcamp.format}`)}</Badge>
         </div>
         <h1 className="text-3xl font-bold">{bootcamp.title}</h1>

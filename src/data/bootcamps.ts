@@ -61,7 +61,33 @@ export const bootcamps: Bootcamp[] = [
     description: "Learn pandas, NumPy, visualization and core ML algorithms through real datasets and weekly projects.",
     heroImage:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
     tags: ["Python", "Pandas", "Machine Learning"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Python & Data Foundations",
+        durationHours: 20,
+        lessons: ["Python Syntax Refresher", "NumPy Arrays", "Pandas DataFrames"],
+      },
+      {
+        title: "Data Cleaning & Visualization",
+        durationHours: 20,
+        lessons: ["Handling Missing Data", "Exploratory Data Analysis", "Matplotlib & Seaborn"],
+      },
+      {
+        title: "Statistics for Data Science",
+        durationHours: 15,
+        lessons: ["Descriptive Statistics", "Probability Basics", "Hypothesis Testing"],
+      },
+      {
+        title: "Machine Learning Fundamentals",
+        durationHours: 25,
+        lessons: ["Supervised vs Unsupervised Learning", "Regression Models", "Classification Models"],
+      },
+      {
+        title: "Capstone Project",
+        durationHours: 20,
+        lessons: ["Dataset Selection", "Model Evaluation", "Final Presentation"],
+      },
+    ],
     instructorSlug: "marco-dias",
     featured: true,
   },
@@ -80,7 +106,33 @@ export const bootcamps: Bootcamp[] = [
     description: "Covers user research, wireframing, Figma prototyping and usability testing with a portfolio-ready final project.",
     heroImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1600&q=80",
     tags: ["Figma", "UX Research", "Prototyping"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Design Thinking & Research",
+        durationHours: 15,
+        lessons: ["User Interviews", "Personas", "Empathy Mapping"],
+      },
+      {
+        title: "Wireframing & Information Architecture",
+        durationHours: 15,
+        lessons: ["Low-Fidelity Wireframes", "Sitemaps", "User Flows"],
+      },
+      {
+        title: "Visual Design Fundamentals",
+        durationHours: 15,
+        lessons: ["Typography & Color Theory", "Grid Systems", "Design Tokens"],
+      },
+      {
+        title: "Prototyping in Figma",
+        durationHours: 20,
+        lessons: ["Interactive Components", "Auto Layout", "Prototyping Interactions"],
+      },
+      {
+        title: "Usability Testing & Portfolio",
+        durationHours: 15,
+        lessons: ["Test Planning", "Iterating on Feedback", "Portfolio Case Study"],
+      },
+    ],
     instructorSlug: "amira-saad",
     featured: false,
   },
@@ -99,7 +151,33 @@ export const bootcamps: Bootcamp[] = [
     description: "An advanced track for engineers who want to own infrastructure, covering containerization, orchestration and automated deployment.",
     heroImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=80",
     tags: ["AWS", "Docker", "Kubernetes"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Cloud Fundamentals",
+        durationHours: 20,
+        lessons: ["AWS Core Services", "IAM & Security Basics", "Networking in the Cloud"],
+      },
+      {
+        title: "Containerization with Docker",
+        durationHours: 25,
+        lessons: ["Docker Images & Containers", "Docker Compose", "Container Best Practices"],
+      },
+      {
+        title: "Kubernetes Orchestration",
+        durationHours: 30,
+        lessons: ["Pods & Deployments", "Services & Ingress", "Helm Charts"],
+      },
+      {
+        title: "CI/CD Pipelines",
+        durationHours: 25,
+        lessons: ["Pipeline Design", "GitHub Actions", "Automated Testing & Deployment"],
+      },
+      {
+        title: "Capstone: Production Infrastructure",
+        durationHours: 20,
+        lessons: ["Infrastructure as Code", "Monitoring & Logging", "Final Deployment"],
+      },
+    ],
     instructorSlug: "jan-de-vries",
     featured: false,
   },
@@ -119,7 +197,33 @@ export const bootcamps: Bootcamp[] = [
     description: "Covers network security, ethical hacking basics, threat modeling and incident response through hands-on labs.",
     heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80",
     tags: ["Security", "Networking", "Linux"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Security & Networking Foundations",
+        durationHours: 20,
+        lessons: ["Networking Fundamentals", "Linux for Security", "Common Threats"],
+      },
+      {
+        title: "Ethical Hacking Basics",
+        durationHours: 20,
+        lessons: ["Reconnaissance Techniques", "Vulnerability Scanning", "Penetration Testing Intro"],
+      },
+      {
+        title: "Threat Modeling & Defense",
+        durationHours: 20,
+        lessons: ["Risk Assessment", "Security Hardening", "Firewalls & IDS"],
+      },
+      {
+        title: "Incident Response",
+        durationHours: 15,
+        lessons: ["Detection & Analysis", "Incident Handling Process", "Post-Incident Review"],
+      },
+      {
+        title: "Hands-On Labs & Capstone",
+        durationHours: 15,
+        lessons: ["Capture the Flag Exercises", "Security Audit Project", "Final Presentation"],
+      },
+    ],
     instructorSlug: "priya-nair",
     featured: false,
   },
@@ -138,7 +242,33 @@ export const bootcamps: Bootcamp[] = [
     description: "From setting up your first screen to publishing on the App Store and Play Store, with a real client project.",
     heroImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1600&q=80",
     tags: ["React Native", "Mobile", "TypeScript"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Mobile Development Foundations",
+        durationHours: 15,
+        lessons: ["React Native Setup", "Navigation", "Styling for Mobile"],
+      },
+      {
+        title: "Core Mobile Features",
+        durationHours: 25,
+        lessons: ["State Management", "Device APIs", "Local Storage"],
+      },
+      {
+        title: "Working with APIs & Data",
+        durationHours: 20,
+        lessons: ["REST Integration", "Authentication", "Offline Support"],
+      },
+      {
+        title: "Publishing & App Store Prep",
+        durationHours: 15,
+        lessons: ["App Store Guidelines", "Play Store Guidelines", "Build & Release Process"],
+      },
+      {
+        title: "Client Project & Capstone",
+        durationHours: 20,
+        lessons: ["Requirements Gathering", "Client Project Build", "Final Demo"],
+      },
+    ],
     instructorSlug: "tomasz-nowak",
     featured: true,
   },
@@ -157,7 +287,33 @@ export const bootcamps: Bootcamp[] = [
     description: "A practical program covering SEO, Google Ads, social media strategy and analytics, with a live campaign as final project.",
     heroImage: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1600&q=80",
     tags: ["SEO", "Google Ads", "Analytics"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Marketing Foundations & SEO",
+        durationHours: 15,
+        lessons: ["SEO Fundamentals", "Keyword Research", "On-Page Optimization"],
+      },
+      {
+        title: "Paid Advertising",
+        durationHours: 15,
+        lessons: ["Google Ads Basics", "Campaign Structuring", "Budgeting & Bidding"],
+      },
+      {
+        title: "Content & Social Strategy",
+        durationHours: 10,
+        lessons: ["Content Planning", "Social Media Strategy", "Copywriting Basics"],
+      },
+      {
+        title: "Analytics & Measurement",
+        durationHours: 10,
+        lessons: ["Google Analytics Setup", "Conversion Tracking", "Reporting Dashboards"],
+      },
+      {
+        title: "Live Campaign Capstone",
+        durationHours: 10,
+        lessons: ["Campaign Planning", "Launch & Optimization", "Results Presentation"],
+      },
+    ],
     instructorSlug: "sophie-laurent",
     featured: false,
   },
@@ -176,7 +332,33 @@ export const bootcamps: Bootcamp[] = [
     description: "Covers discovery, roadmapping, stakeholder communication and metrics, taught by working product managers.",
     heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80",
     tags: ["Product Strategy", "Agile", "Roadmapping"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Product Discovery",
+        durationHours: 15,
+        lessons: ["Problem Framing", "User Research for PMs", "Market Analysis"],
+      },
+      {
+        title: "Roadmapping & Prioritization",
+        durationHours: 15,
+        lessons: ["Roadmap Frameworks", "Prioritization Techniques", "OKRs"],
+      },
+      {
+        title: "Agile Delivery",
+        durationHours: 15,
+        lessons: ["Scrum & Kanban Basics", "Backlog Management", "Working with Engineering"],
+      },
+      {
+        title: "Stakeholder Communication",
+        durationHours: 10,
+        lessons: ["Stakeholder Mapping", "Writing PRDs", "Presenting to Leadership"],
+      },
+      {
+        title: "Metrics & Capstone",
+        durationHours: 15,
+        lessons: ["Product Metrics", "A/B Testing Basics", "Feature Launch Project"],
+      },
+    ],
     instructorSlug: "daniel-osei",
     featured: false,
   },
@@ -195,7 +377,33 @@ export const bootcamps: Bootcamp[] = [
     description: "For developers who already know React and want to master advanced patterns, testing and large-scale architecture.",
     heroImage: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1600&q=80",
     tags: ["React", "TypeScript", "Testing"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Advanced React Patterns",
+        durationHours: 20,
+        lessons: ["Compound Components", "Render Props & HOCs", "Custom Hooks"],
+      },
+      {
+        title: "TypeScript for React",
+        durationHours: 15,
+        lessons: ["Advanced Types", "Generics in Components", "Type-Safe Props"],
+      },
+      {
+        title: "Performance Optimization",
+        durationHours: 15,
+        lessons: ["Memoization", "Code Splitting", "Profiling React Apps"],
+      },
+      {
+        title: "Testing Strategies",
+        durationHours: 15,
+        lessons: ["Unit Testing with Jest", "Component Testing", "End-to-End Testing"],
+      },
+      {
+        title: "Architecture & Capstone",
+        durationHours: 15,
+        lessons: ["Large-Scale App Architecture", "State Management at Scale", "Final Project"],
+      },
+    ],
     instructorSlug: "lena-hoffman",
     featured: true,
   },
@@ -214,7 +422,33 @@ export const bootcamps: Bootcamp[] = [
     description: "Covers ETL design, Apache Spark, workflow orchestration and cloud data warehouses through a capstone pipeline project.",
     heroImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80",
     tags: ["Spark", "ETL", "Cloud"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Data Engineering Foundations",
+        durationHours: 20,
+        lessons: ["Data Modeling", "SQL for Engineers", "Batch vs Streaming"],
+      },
+      {
+        title: "ETL Design",
+        durationHours: 25,
+        lessons: ["Extract-Transform-Load Patterns", "Data Quality & Validation", "Workflow Orchestration"],
+      },
+      {
+        title: "Apache Spark",
+        durationHours: 30,
+        lessons: ["Spark Fundamentals", "DataFrames & RDDs", "Spark Performance Tuning"],
+      },
+      {
+        title: "Cloud Data Warehouses",
+        durationHours: 20,
+        lessons: ["Warehouse Architecture", "Cloud Storage Integration", "Query Optimization"],
+      },
+      {
+        title: "Capstone Pipeline Project",
+        durationHours: 20,
+        lessons: ["Pipeline Design", "Deployment & Monitoring", "Final Presentation"],
+      },
+    ],
     instructorSlug: "marco-dias",
     featured: false,
   },
@@ -233,7 +467,33 @@ export const bootcamps: Bootcamp[] = [
     description: "Learn token-based design, component libraries and documentation practices used by product teams.",
     heroImage: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1600&q=80",
     tags: ["Design Systems", "Figma", "Tokens"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Design Systems Foundations",
+        durationHours: 10,
+        lessons: ["What is a Design System", "Design Tokens Basics", "Auditing Existing UI"],
+      },
+      {
+        title: "Component Libraries",
+        durationHours: 15,
+        lessons: ["Building Reusable Components", "Component States & Variants", "Accessibility in Components"],
+      },
+      {
+        title: "Documentation Practices",
+        durationHours: 10,
+        lessons: ["Writing Component Docs", "Design-Dev Handoff", "Versioning"],
+      },
+      {
+        title: "Scaling Design Systems",
+        durationHours: 10,
+        lessons: ["Governance Models", "Cross-Team Adoption", "Maintaining Consistency"],
+      },
+      {
+        title: "Capstone: Build a Mini Design System",
+        durationHours: 10,
+        lessons: ["System Planning", "Implementation in Figma", "Final Presentation"],
+      },
+    ],
     instructorSlug: "amira-saad",
     featured: false,
   },
@@ -252,7 +512,33 @@ export const bootcamps: Bootcamp[] = [
     description: "A gentle introduction to AWS, Docker and basic CI/CD for developers moving into cloud-native workflows.",
     heroImage: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1600&q=80",
     tags: ["AWS", "Docker", "CI/CD"],
-    curriculum: [],
+    curriculum: [
+      {
+        title: "Cloud Basics",
+        durationHours: 15,
+        lessons: ["Introduction to AWS", "Cloud Computing Concepts", "Setting Up Your First Account"],
+      },
+      {
+        title: "Containers with Docker",
+        durationHours: 15,
+        lessons: ["Docker Fundamentals", "Building Images", "Running Containers"],
+      },
+      {
+        title: "CI/CD Introduction",
+        durationHours: 15,
+        lessons: ["Version Control Workflows", "Basic Pipeline Setup", "Automated Testing"],
+      },
+      {
+        title: "Deploying to the Cloud",
+        durationHours: 15,
+        lessons: ["Deploying Containers", "Environment Configuration", "Basic Monitoring"],
+      },
+      {
+        title: "Final Project",
+        durationHours: 15,
+        lessons: ["Project Planning", "Build & Deploy", "Presentation"],
+      },
+    ],
     instructorSlug: "jan-de-vries",
     featured: false,
   },
