@@ -3,7 +3,7 @@ import "./globals.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="min-h-full">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-screen flex flex-col antialiased">{children}</body>
     </html>
   );
 }
