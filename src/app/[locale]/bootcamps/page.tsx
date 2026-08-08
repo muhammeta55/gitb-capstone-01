@@ -5,6 +5,7 @@ import { categories } from "@/data/categories";
 import { BootcampsBrowser } from "@/components/bootcamps/BootcampsBrowser";
 import { BootcampsGridSkeleton } from "@/components/bootcamps/BootcampGridSkeleton";
 
+
 export default function BootcampsPage() {
   const t = useTranslations("bootcampsPage");
 
