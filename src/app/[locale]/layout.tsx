@@ -49,7 +49,7 @@ export default async function LocaleLayout({
 
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} h-full flex flex-col antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} min-h-full flex flex-col antialiased`}
     >
       <LocaleHtmlSync locale={locale} />
       <NextIntlClientProvider messages={messages}>
