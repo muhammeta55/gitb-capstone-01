@@ -17,7 +17,7 @@ const levelVariant: Record<Level, "success" | "warning" | "error"> = {
   advanced: "error",
 };
 
-export const dynamic = "force-static";
+
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -40,6 +40,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${bootcamp.title} | GITBootcamp`,
     description: bootcamp.shortDescription,
+    openGraph: {
+      title: `${bootcamp.title} | GITBootcamp`,
+      description: bootcamp.shortDescription,
+      images: [bootcamp.heroImage],
+    },
   };
 }
 
