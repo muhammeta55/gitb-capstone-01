@@ -172,25 +172,22 @@
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
   },
-
   "errorState": {
-  "title": "Bir şeyler yanlış gitti",
-  "description": "Bu sayfa yüklenemedi. Lütfen tekrar deneyin.",
-  "retry": "Tekrar dene"
+    "title": "Bir şeyler yanlış gitti",
+    "description": "Bu sayfa yüklenemedi. Lütfen tekrar deneyin.",
+    "retry": "Tekrar dene"
   },
-
   "notFoundPage": {
-  "title": "Sayfa bulunamadı",
-  "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
-  "backHome": "Ana sayfaya dön",
-  "popularPages": "Ya da bu popüler sayfalara göz atın",
-  "links": {
-    "bootcamps": "Bootcamp'lere göz at",
-    "schedule": "Programı görüntüle",
-    "home": "Ana sayfa"
-  }
-},
-  
+    "title": "Sayfa bulunamadı",
+    "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+    "backHome": "Ana sayfaya dön",
+    "popularPages": "Ya da bu popüler sayfalara göz atın",
+    "links": {
+      "bootcamps": "Bootcamp'lere göz at",
+      "schedule": "Programı görüntüle",
+      "home": "Ana sayfa"
+    }
+  },
   "about": {
     "mission": {
       "title": "Misyonumuz",
@@ -272,7 +269,6 @@
       "emailTaken": "Bu e-posta zaten kayıtlı"
     }
   },
-
   "contactPage": {
     "title": "Bize ulaşın",
     "subtitle": "Bootcamp'ler, iş birlikleri ya da başka bir konu hakkında — her mesajı okuyoruz.",

@@ -79,7 +79,8 @@ export default function RegisterPage() {
     setIsLoading(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Mock: bu email zaten kayıtlıysa hata simülasyonu
+    // Mock error trigger for testing: submit with email "test@test.com"
+    // to simulate an "email already registered" error.
     if (email === "test@test.com") {
       setErrors({ form: t("errors.emailTaken") });
       setIsLoading(false);

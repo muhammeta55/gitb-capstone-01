@@ -162,7 +162,6 @@
       "onsite": "Onsite"
     }
   },
-  
   "schedulePage": {
     "title": "Schedule",
     "subtitle": "View upcoming cohorts and their start dates.",
@@ -173,26 +172,23 @@
     "seconds": "seconds",
     "seatsLeft": "{count} seats left"
   },
-
   "errorState": {
-  "title": "Something went wrong",
-  "description": "We couldn't load this page. Please try again.",
-  "retry": "Try again"
+    "title": "Something went wrong",
+    "description": "We couldn't load this page. Please try again.",
+    "retry": "Try again"
   },
-
   "notFoundPage": {
-  "title": "Page not found",
-  "subtitle": "The page you're looking for doesn't exist or has been moved.",
-  "backHome": "Back to home",
-  "popularPages": "Or check out these popular pages",
-  "links": {
-    "bootcamps": "Browse bootcamps",
-    "schedule": "View schedule",
-    "home": "Home"
-  }
-},
-  
-"about": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home",
+    "popularPages": "Or check out these popular pages",
+    "links": {
+      "bootcamps": "Browse bootcamps",
+      "schedule": "View schedule",
+      "home": "Home"
+    }
+  },
+  "about": {
     "mission": {
       "title": "Our mission",
       "description": "We believe a career change shouldn't take four years and a mountain of debt. GITBootcamp exists to get people from zero to hired, through live teaching, real projects, and honest career support."
@@ -273,7 +269,6 @@
       "emailTaken": "This email is already registered"
     }
   },
-
   "contactPage": {
     "title": "Get in touch",
     "subtitle": "Questions about a bootcamp, partnerships, or anything else — we read every message.",
