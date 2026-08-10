@@ -7,10 +7,8 @@ import { Geist, Geist_Mono, Sora } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import {LocaleHtmlSync} from "@/components/LocaleHtmlSync";
-
-
-
+import { LocaleHtmlSync } from "@/components/LocaleHtmlSync";
+import { PageTransition } from "@/components/layout/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,7 +52,7 @@ export default async function LocaleLayout({
       <LocaleHtmlSync locale={locale} />
       <NextIntlClientProvider messages={messages}>
         <Header />
-        <div className="flex-1 flex flex-col">{children}</div>
+        <PageTransition>{children}</PageTransition>
         <Footer />
       </NextIntlClientProvider>
     </div>
