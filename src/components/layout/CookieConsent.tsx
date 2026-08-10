@@ -20,10 +20,10 @@ export function CookieConsent() {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- reading
-    // browser storage after mount is the documented exception for this rule
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reading browser storage after mount is the documented exception for this rule
     if (!stored) setVisible(true);
   }, []);
+    
 
   function saveConsent(prefs: ConsentPreferences) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
