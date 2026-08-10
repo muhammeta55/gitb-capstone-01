@@ -1,11 +1,21 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
+import { Metadata } from "next";
+import { getTranslations, getLocale } from "next-intl/server";
 import { cohorts } from "@/data/cohorts";
 import { bootcamps } from "@/data/bootcamps";
 import { CohortCountdown } from "@/components/schedule/CohortCountdown";
 
-// Kohort + bootcamp bilgisini birleştirip aya göre gruplar
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta.schedule");
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+    },
+  };
+}
+
 function groupByMonth(locale: string) {
   const enriched = cohorts
     .map((cohort) => {
@@ -42,9 +52,9 @@ function groupByMonth(locale: string) {
   return groups;
 }
 
-export default function SchedulePage() {
-  const t = useTranslations("schedulePage");
-  const locale = useLocale();
+export default async function SchedulePage() {
+  const t = await getTranslations("schedulePage");
+  const locale = await getLocale();
   const groups = groupByMonth(locale);
 
   return (

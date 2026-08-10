@@ -281,9 +281,6 @@
       "submitting": "Sending...",
       "successTitle": "Message sent",
       "successDescription": "Thanks for reaching out — we'll get back to you within one business day.",
-      "errorTitle": "Error sending message",
-      "errorDescription": "There was an error sending your message. Please try again.",
-      "tryAgain": "Try Again",
       "errors": {
         "required": "This field is required.",
         "invalidEmail": "Enter a valid email address.",
@@ -297,6 +294,36 @@
       "addressLabel": "Address",
       "hoursLabel": "Office hours",
       "hoursValue": "Mon–Fri, 9:00–18:00 CET"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "GITBootcamp — Code your way into tech",
+      "description": "Live, project-based bootcamps in web development, data, and product design."
+    },
+    "about": {
+      "title": "About Us | GITBootcamp",
+      "description": "Learn about GITBootcamp's mission, team, and story."
+    },
+    "bootcamps": {
+      "title": "All Bootcamps | GITBootcamp",
+      "description": "Browse all bootcamps and find the right program for you."
+    },
+    "contact": {
+      "title": "Contact Us | GITBootcamp",
+      "description": "Get in touch with GITBootcamp for questions or partnerships."
+    },
+    "login": {
+      "title": "Login | GITBootcamp",
+      "description": "Sign in to your GITBootcamp account."
+    },
+    "register": {
+      "title": "Register | GITBootcamp",
+      "description": "Create your GITBootcamp account and start learning."
+    },
+    "schedule": {
+      "title": "Schedule | GITBootcamp",
+      "description": "View upcoming bootcamp cohorts and start dates."
     }
   }
 }

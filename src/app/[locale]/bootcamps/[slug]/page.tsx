@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
@@ -27,6 +28,27 @@ export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
     getAllBootcampSlugs(bootcamps).map((slug) => ({ locale, slug }))
   );
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const bootcamp = getBootcampBySlug(bootcamps, slug);
+
+  if (!bootcamp) {
+    return {
+      title: "Bootcamp Not Found | GITBootcamp",
+    };
+  }
+
+  return {
+    title: `${bootcamp.title} | GITBootcamp`,
+    description: bootcamp.shortDescription,
+    openGraph: {
+      title: `${bootcamp.title} | GITBootcamp`,
+      description: bootcamp.shortDescription,
+      images: [bootcamp.heroImage],
+    },
+  };
 }
 
 export default async function BootcampDetailPage({ params }: PageProps) {
@@ -77,7 +99,6 @@ export default async function BootcampDetailPage({ params }: PageProps) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Sol: içerik */}
         <div className="lg:col-span-2 space-y-8">
           <section>
             <h2 className="text-xl font-semibold mb-3">{t("about")}</h2>
@@ -94,7 +115,6 @@ export default async function BootcampDetailPage({ params }: PageProps) {
           </section>
         </div>
 
-        {/* Sağ: sabit fiyat/kayıt paneli */}
         <div className="lg:col-span-1">
           <div className="lg:sticky lg:top-24">
             <Card className="space-y-4">

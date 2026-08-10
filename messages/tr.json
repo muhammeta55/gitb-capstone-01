@@ -281,9 +281,6 @@
       "submitting": "Gönderiliyor...",
       "successTitle": "Mesaj gönderildi",
       "successDescription": "Ulaştığın için teşekkürler — bir iş günü içinde sana geri döneceğiz.",
-      "errorTitle": "Mesaj gönderilirken hata oluştu",
-      "errorDescription": "Mesajınız gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-      "tryAgain": "Tekrar Dene",
       "errors": {
         "required": "Bu alan zorunludur.",
         "invalidEmail": "Geçerli bir e-posta adresi gir.",
@@ -297,6 +294,36 @@
       "addressLabel": "Adres",
       "hoursLabel": "Çalışma saatleri",
       "hoursValue": "Pzt–Cum, 9:00–18:00 CET"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "GITBootcamp — Teknoloji kariyerine kod yazarak adım at",
+      "description": "Web geliştirme, veri ve ürün tasarımı alanlarında canlı, proje tabanlı bootcamp'ler."
+    },
+    "about": {
+      "title": "Hakkımızda | GITBootcamp",
+      "description": "GITBootcamp'in misyonu, ekibi ve hikayesi hakkında bilgi edinin."
+    },
+    "bootcamps": {
+      "title": "Tüm Bootcamp'ler | GITBootcamp",
+      "description": "Tüm bootcamp'lere göz atın ve size uygun programı bulun."
+    },
+    "contact": {
+      "title": "İletişim | GITBootcamp",
+      "description": "Sorularınız veya iş birlikleri için GITBootcamp ile iletişime geçin."
+    },
+    "login": {
+      "title": "Giriş Yap | GITBootcamp",
+      "description": "GITBootcamp hesabınıza giriş yapın."
+    },
+    "register": {
+      "title": "Kayıt Ol | GITBootcamp",
+      "description": "GITBootcamp hesabınızı oluşturun ve öğrenmeye başlayın."
+    },
+    "schedule": {
+      "title": "Program Takvimi | GITBootcamp",
+      "description": "Yaklaşan bootcamp dönemlerini ve başlangıç tarihlerini görüntüleyin."
     }
   }
 }
