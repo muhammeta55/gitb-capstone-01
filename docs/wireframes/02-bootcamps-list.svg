@@ -1,0 +1,22 @@
+<svg width="680" height="520" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="520" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .teal { fill:#e0f2f1; stroke:#4db6ac; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="box" x="40" y="92" width="600" height="50" rx="4"/><text class="th" x="60" y="112">Search bar</text><text class="ts" x="60" y="130">Title + description above</text>
+<rect class="teal" x="40" y="154" width="190" height="40" rx="4"/><text class="th" x="135" y="178" text-anchor="middle">Category filter</text>
+<rect class="teal" x="240" y="154" width="190" height="40" rx="4"/><text class="th" x="335" y="178" text-anchor="middle">Level filter</text>
+<rect class="teal" x="440" y="154" width="200" height="40" rx="4"/><text class="th" x="540" y="178" text-anchor="middle">Sort</text>
+<text class="ts" x="40" y="220">Result count</text>
+<rect class="box" x="40" y="234" width="182" height="130" rx="4"/><text class="ts" x="131" y="303" text-anchor="middle">Card</text>
+<rect class="box" x="249" y="234" width="182" height="130" rx="4"/><text class="ts" x="340" y="303" text-anchor="middle">Card</text>
+<rect class="box" x="458" y="234" width="182" height="130" rx="4"/><text class="ts" x="549" y="303" text-anchor="middle">Card</text>
+<rect class="box" x="40" y="380" width="182" height="130" rx="4"/><text class="ts" x="131" y="449" text-anchor="middle">Card</text>
+<rect class="box" x="249" y="380" width="182" height="130" rx="4"/><text class="ts" x="340" y="449" text-anchor="middle">Card</text>
+<rect class="box" x="458" y="380" width="182" height="130" rx="4"/><text class="ts" x="549" y="449" text-anchor="middle">Card</text>
+<text class="ts" x="40" y="500">Empty state: message + clear filters button (when no results)</text>
+</svg>
