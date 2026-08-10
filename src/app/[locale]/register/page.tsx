@@ -48,6 +48,7 @@ export default function RegisterPage() {
     password?: string;
     confirmPassword?: string;
     terms?: string;
+    form?: string;
   }>({});
 
   const strength = useMemo(() => getPasswordStrength(password), [password]);
@@ -78,7 +79,16 @@ export default function RegisterPage() {
     setIsLoading(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
+    // Mock error trigger for testing: submit with email "test@test.com"
+    // to simulate an "email already registered" error.
+    if (email === "test@test.com") {
+      setErrors({ form: t("errors.emailTaken") });
+      setIsLoading(false);
+      return;
+    }
+
     setSuccessMessage(t("success"));
+    setErrors({});
     setIsLoading(false);
   }
 
@@ -177,6 +187,12 @@ export default function RegisterPage() {
               <span className="text-sm text-error mt-1 block">{errors.terms}</span>
             )}
           </div>
+
+          {errors.form && (
+            <p className="text-sm text-error" role="alert">
+              {errors.form}
+            </p>
+          )}
 
           {successMessage && (
             <p className="text-sm text-success" role="status">
