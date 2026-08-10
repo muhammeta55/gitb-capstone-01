@@ -1,10 +1,19 @@
-import { useTranslations } from "next-intl";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactInfo } from "@/components/contact/ContactInfo";
 import { LocationMap } from "@/components/contact/LocationMap";
 
-export default function ContactPage() {
-  const t = useTranslations("contactPage");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta.contact");
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function ContactPage() {
+  const t = await getTranslations("contactPage");
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
