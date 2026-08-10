@@ -17,6 +17,8 @@ const levelVariant: Record<Level, "success" | "warning" | "error"> = {
   advanced: "error",
 };
 
+export const dynamic = "force-static";
+
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
 }

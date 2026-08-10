@@ -30,7 +30,7 @@ export function ContactForm() {
   const t = useTranslations("contactPage.form");
   const [values, setValues] = useState<FormValues>(INITIAL_VALUES);
   const [errors, setErrors] = useState<FormErrors>({});
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   function validate(current: FormValues): FormErrors {
     const nextErrors: FormErrors = {};
@@ -70,6 +70,11 @@ export function ContactForm() {
     setStatus("loading");
 
     setTimeout(() => {
+      //mock: sunucu hatası simülasyonu
+    if (values.subject.trim().toLowerCase() === "test-error") {
+        setStatus("error");
+        return;
+      }
       setStatus("success");
     }, 1000);
   }
@@ -82,6 +87,19 @@ export function ContactForm() {
       </div>
     );
   }
+
+  if (status === "error") {
+    return (
+      <div className="rounded-md border border-error bg-error/10 p-6 text-center" role="alert">
+        <p className="font-medium text-text">{t("errorTitle")}</p>
+        <p className="mt-1 text-sm text-muted">{t("errorDescription")}</p>
+        <Button type="button" onClick={() => setStatus("idle")} className="mt-4">
+          {t("tryAgain")}
+        </Button>
+      </div>
+    );
+  }
+     
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">

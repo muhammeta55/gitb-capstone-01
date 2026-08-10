@@ -172,11 +172,7 @@
     "seconds": "seconds",
     "seatsLeft": "{count} seats left"
   },
-  "errorState": {
-    "title": "Something went wrong",
-    "description": "We couldn't load this page. Please try again.",
-    "retry": "Try again"
-  },
+
   "notFoundPage": {
     "title": "Page not found",
     "subtitle": "The page you're looking for doesn't exist or has been moved.",
@@ -281,9 +277,6 @@
       "submitting": "Sending...",
       "successTitle": "Message sent",
       "successDescription": "Thanks for reaching out — we'll get back to you within one business day.",
-      "errorTitle": "Something went wrong",
-      "errorDescription": "We couldn't send your message. Please try again.",
-      "retry": "Try again",
       "errors": {
         "required": "This field is required.",
         "invalidEmail": "Enter a valid email address.",

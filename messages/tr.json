@@ -172,11 +172,7 @@
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
   },
-  "errorState": {
-    "title": "Bir şeyler ters gitti",
-    "description": "Bu sayfa yüklenemedi. Lütfen tekrar deneyin.",
-    "retry": "Tekrar dene"
-  },
+
   "notFoundPage": {
     "title": "Sayfa bulunamadı",
     "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
@@ -281,9 +277,6 @@
       "submitting": "Gönderiliyor...",
       "successTitle": "Mesaj gönderildi",
       "successDescription": "Ulaştığın için teşekkürler — bir iş günü içinde sana geri döneceğiz.",
-      "errorTitle": "Bir şeyler ters gitti",
-      "errorDescription": "Mesajınızı gönderemedik. Lütfen tekrar deneyin.",
-      "retry": "Tekrar dene",
       "errors": {
         "required": "Bu alan zorunludur.",
         "invalidEmail": "Geçerli bir e-posta adresi gir.",
