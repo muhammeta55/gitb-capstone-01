@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {LocaleHtmlSync} from "@/components/LocaleHtmlSync";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 
 
 
@@ -56,6 +57,7 @@ export default async function LocaleLayout({
         <Header />
         <div className="flex-1 flex flex-col">{children}</div>
         <Footer />
+        <CookieConsent />
       </NextIntlClientProvider>
     </div>
   );
