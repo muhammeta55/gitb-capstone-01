@@ -173,6 +173,12 @@
     "seatsLeft": "{count} koltuk kaldı"
   },
 
+  "errorState": {
+  "title": "Bir şeyler yanlış gitti",
+  "description": "Bu sayfa yüklenemedi. Lütfen tekrar deneyin.",
+  "retry": "Tekrar dene"
+  },
+
   "notFoundPage": {
   "title": "Sayfa bulunamadı",
   "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
@@ -262,7 +268,8 @@
       "passwordRequired": "Şifre zorunludur",
       "confirmPasswordRequired": "Lütfen şifrenizi tekrar girin",
       "passwordMismatch": "Şifreler eşleşmiyor",
-      "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz"
+      "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz",
+      "emailTaken": "Bu e-posta zaten kayıtlı"
     }
   },
 
@@ -278,6 +285,9 @@
       "submitting": "Gönderiliyor...",
       "successTitle": "Mesaj gönderildi",
       "successDescription": "Ulaştığın için teşekkürler — bir iş günü içinde sana geri döneceğiz.",
+      "errorTitle": "Mesaj gönderilirken hata oluştu",
+      "errorDescription": "Mesajınız gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+      "tryAgain": "Tekrar Dene",
       "errors": {
         "required": "Bu alan zorunludur.",
         "invalidEmail": "Geçerli bir e-posta adresi gir.",
