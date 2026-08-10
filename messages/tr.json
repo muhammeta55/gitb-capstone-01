@@ -172,7 +172,11 @@
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
   },
-
+  "errorState": {
+    "title": "Bir şeyler yanlış gitti",
+    "description": "Bu sayfa yüklenemedi. Lütfen tekrar deneyin.",
+    "retry": "Tekrar dene"
+  },
   "notFoundPage": {
     "title": "Sayfa bulunamadı",
     "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",

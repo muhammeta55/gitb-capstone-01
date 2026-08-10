@@ -172,7 +172,11 @@
     "seconds": "seconds",
     "seatsLeft": "{count} seats left"
   },
-
+  "errorState": {
+    "title": "Something went wrong",
+    "description": "We couldn't load this page. Please try again.",
+    "retry": "Try again"
+  },
   "notFoundPage": {
     "title": "Page not found",
     "subtitle": "The page you're looking for doesn't exist or has been moved.",

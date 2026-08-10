@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
 import { Level } from "@/types";
+import { routing } from "@/i18n/routing";
 
 const levelVariant: Record<Level, "success" | "warning" | "error"> = {
   beginner: "success",
@@ -24,7 +25,9 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return getAllBootcampSlugs(bootcamps).map((slug) => ({ slug }));
+  return routing.locales.flatMap((locale) =>
+    getAllBootcampSlugs(bootcamps).map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

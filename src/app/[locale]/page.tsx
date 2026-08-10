@@ -11,6 +11,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Pricing } from "@/components/landing/Pricing";
 import { Newsletter } from "@/components/landing/Newsletter";
 import { ClosingCTA } from "@/components/landing/ClosingCTA";
+import { ScrollReveal } from "@/components/layout/ScrollReveal";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("meta.home");
@@ -31,10 +32,18 @@ export default function Home() {
       <StatsStrip />
       <FeaturedPrograms />
       <CategoryGrid />
-      <Features />
-      <HowItWorks />
-      <Instructors />
-      <Testimonials />
+      <ScrollReveal>
+        <Features />
+      </ScrollReveal>
+      <ScrollReveal>
+        <HowItWorks />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Instructors />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Testimonials />
+      </ScrollReveal>
       <Pricing />
       <Newsletter />
       <ClosingCTA />

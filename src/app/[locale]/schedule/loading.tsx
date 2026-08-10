@@ -16,7 +16,7 @@ export default function ScheduleLoading() {
               {Array.from({ length: 3 }).map((_, itemIndex) => (
                 <div
                   key={itemIndex}
-                  className="flex flex-col gap-3 rounded-lg border border-muted/20 p-4 sm:flex-row sm:items-center sm:justify-between"
+                  className="flex flex-col gap-3 rounded-lg border border-border p-4 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div className="space-y-2">
                     <Skeleton className="h-5 w-48" />

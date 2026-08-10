@@ -70,8 +70,9 @@ export function ContactForm() {
     setStatus("loading");
 
     setTimeout(() => {
-      //mock: sunucu hatası simülasyonu
-    if (values.subject.trim().toLowerCase() === "test-error") {
+      // Mock error trigger for testing: submit with subject "test-error"
+      // to simulate a failed server response.
+      if (values.subject.trim().toLowerCase() === "test-error") {
         setStatus("error");
         return;
       }
@@ -99,7 +100,6 @@ export function ContactForm() {
       </div>
     );
   }
-     
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
