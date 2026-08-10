@@ -50,11 +50,30 @@ npx lighthouse http://localhost:3000 --view
 
 ### Latest Scores
 
-| Category       | Score |
-|-----------------|-------|
-| Performance      | 97    |
-| Accessibility    | 96    |
-| Best Practices   | 100    |
-| SEO              | 100    |
+Tested locally against a **production build**, using Chrome DevTools Lighthouse (Desktop, Navigation mode). Three representative pages were audited to cover different risk areas: static content, client-side data/interactivity, and dynamic routing.
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Landing (`/en`) | 99 | 95 | 100 | 100 |
+| Bootcamps list (`/en/bootcamps`) | 100 | 90 | 100 | 100 |
+| Bootcamp detail (`/en/bootcamps/full-stack-web-development`) | 97 | 96 | 100 | 100 |
+
+> **Note:** The Bootcamps list page scores exactly 90 on Accessibility — passing, but with no margin. Worth revisiting before it silently regresses below the threshold.
+
+> Scores last updated: 2026-08-10
+
+### Screenshots
+
+**Landing (`/en`)**
+
+![Landing Lighthouse results](docs/lighthouse/landing.png)
+
+**Bootcamps list (`/en/bootcamps`)**
+
+![Bootcamps list Lighthouse results](docs/lighthouse/bootcamps-list.png)
+
+**Bootcamp detail (`/en/bootcamps/full-stack-web-development`)**
+
+![Bootcamp detail Lighthouse results](docs/lighthouse/bootcamp-detail.png)
 
 > Scores last updated: 2026-8-10
