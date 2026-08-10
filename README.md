@@ -34,3 +34,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Lighthouse Audit
+
+This project is periodically audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to track performance, accessibility, best practices, and SEO scores.
+
+To run a local audit:
+
+```bash
+npm run build
+npm run start
+npx lighthouse http://localhost:3000 --view
+```
+
+### Latest Scores
+
+| Category       | Score |
+|-----------------|-------|
+| Performance      | 97    |
+| Accessibility    | 96    |
+| Best Practices   | 100    |
+| SEO              | 100    |
+
+> Scores last updated: 2026-8-10
