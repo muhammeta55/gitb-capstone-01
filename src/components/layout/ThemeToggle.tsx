@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
-import { usePathname } from "@/i18n/navigation";
+import { useEffect, useState } from "react";
 
 function getInitialTheme(): boolean {
   if (typeof window === "undefined") return false;
@@ -11,21 +10,16 @@ function getInitialTheme(): boolean {
 export function ThemeToggle() {
   const [isDark, setIsDark] = useState(getInitialTheme);
   const [mounted, setMounted] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- required: mounted must flip only after client hydration to avoid SSR/client mismatch on the theme button
     setMounted(true);
   }, []);
-
-  useLayoutEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-  }, [isDark, pathname]);
 
   function toggleTheme() {
     const next = !isDark;
     setIsDark(next);
     localStorage.setItem("theme", next ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", next);
   }
 
   if (!mounted) {

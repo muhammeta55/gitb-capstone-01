@@ -8,7 +8,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {LocaleHtmlSync} from "@/components/LocaleHtmlSync";
-
+import { ThemeHtmlSync } from "@/components/ThemeHtmlSync";
 
 
 
@@ -52,6 +52,7 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} flex flex-col flex-1 antialiased`}
     >
       <LocaleHtmlSync locale={locale} />
+      <ThemeHtmlSync />
       <NextIntlClientProvider messages={messages}>
         <Header />
         <div className="flex-1 flex flex-col">{children}</div>
