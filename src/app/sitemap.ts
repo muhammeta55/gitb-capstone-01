@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { bootcamps } from "@/data/bootcamps";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
 const STATIC_PATHS = ["", "/about", "/bootcamps", "/contact", "/login", "/register", "/schedule"];
 
