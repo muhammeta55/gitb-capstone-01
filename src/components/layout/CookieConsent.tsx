@@ -20,6 +20,8 @@ export function CookieConsent() {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reading
+    // browser storage after mount is the documented exception for this rule
     if (!stored) setVisible(true);
   }, []);
 
@@ -54,7 +56,7 @@ export function CookieConsent() {
             <p className="text-sm text-muted">
               {t("message")}
             </p>
-            <div className="flex flex-wrap gap-2 shrink-0">
+            <div className="flex flex-wrap gap-2 shrink-0 items-center">
               <button
                 type="button"
                 onClick={() => setShowPreferences(true)}
@@ -62,13 +64,9 @@ export function CookieConsent() {
               >
                 {t("managePreferences")}
               </button>
-              <button
-                type="button"
-                onClick={handleRejectAll}
-                className="text-sm text-text border border-border rounded-md px-4 py-2 hover:bg-surface"
-              >
+              <Button variant="ghost" size="sm" onClick={handleRejectAll}>
                 {t("rejectAll")}
-              </button>
+              </Button>
               <Button size="sm" onClick={handleAcceptAll}>
                 {t("acceptAll")}
               </Button>
@@ -102,13 +100,9 @@ export function CookieConsent() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 justify-end">
-              <button
-                type="button"
-                onClick={() => setShowPreferences(false)}
-                className="text-sm text-text border border-border rounded-md px-4 py-2 hover:bg-surface"
-              >
+              <Button variant="ghost" size="sm" onClick={() => setShowPreferences(false)}>
                 {t("back")}
-              </button>
+              </Button>
               <Button size="sm" onClick={handleSavePreferences}>
                 {t("savePreferences")}
               </Button>
