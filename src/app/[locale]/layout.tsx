@@ -57,7 +57,9 @@ export default async function LocaleLayout({
       <ThemeHtmlSync />
       <NextIntlClientProvider messages={messages}>
         <Header />
-        <PageTransition>{children}</PageTransition>
+        <div className="flex-1 flex flex-col">
+          <PageTransition>{children}</PageTransition>
+        </div>
         <Footer />
         <CookieConsent />
       </NextIntlClientProvider>
