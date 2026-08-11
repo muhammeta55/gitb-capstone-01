@@ -1,57 +1,76 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { useCountdown } from "@/hooks/useCountdown";
+import { useEffect, useState } from "react";
 
-interface Props {
+interface CohortCountdownProps {
   startDate: string;
+  labels?: {
+    started?: string;
+    startsInPrefix?: string;
+    startsInSuffix?: string;
+    daysUnit?: string;
+    hoursUnit?: string;
+    minutesUnit?: string;
+    secondsUnit?: string;
+  };
 }
 
-export function CohortCountdown({ startDate }: Props) {
-  const t = useTranslations("schedulePage");
-  const { ready, hasStarted, days, hours, minutes, seconds } = useCountdown(startDate);
+type TimeParts =
+  | { started: true }
+  | { started: false; days: number; hours: number; minutes: number; seconds: number };
 
-  if (!ready) {
-    // Sunucu ve istemcinin ilk render'da eşleşmesi için sabit placeholder
+function getTimeParts(startDate: string): TimeParts {
+  const diff = new Date(startDate).getTime() - Date.now();
+
+  if (diff <= 0) {
+    return { started: true };
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  return { started: false, days, hours, minutes, seconds };
+}
+
+export function CohortCountdown({ startDate, labels }: CohortCountdownProps) {
+  const [time, setTime] = useState<TimeParts | null>(null);
+
+  useEffect(() => {
+    setTime(getTimeParts(startDate));
+    const interval = setInterval(() => {
+      setTime(getTimeParts(startDate));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [startDate]);
+
+  if (time === null) {
+    return <p className="text-xs font-medium text-transparent select-none">&nbsp;</p>;
+  }
+
+  if (time.started) {
     return (
-      <div className="flex items-center gap-2 font-mono text-sm opacity-0" aria-hidden="true">
-        <TimeUnit value={0} label={t("days")} />
-        <span>:</span>
-        <TimeUnit value={0} label={t("hours")} />
-        <span>:</span>
-        <TimeUnit value={0} label={t("minutes")} />
-        <span>:</span>
-        <TimeUnit value={0} label={t("seconds")} />
-      </div>
+      <p className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600">
+        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        {labels?.started ?? "Started"}
+      </p>
     );
   }
 
-  if (hasStarted) {
-    return (
-      <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-        {t("started")}
-      </span>
-    );
-  }
+  const prefix = labels?.startsInPrefix ?? "Starts in";
+  const suffix = labels?.startsInSuffix ?? "";
+  const dU = labels?.daysUnit ?? "d";
+  const hU = labels?.hoursUnit ?? "h";
+  const mU = labels?.minutesUnit ?? "m";
+  const sU = labels?.secondsUnit ?? "s";
 
   return (
-    <div className="flex items-center gap-2 font-mono text-sm" aria-live="polite">
-      <TimeUnit value={days} label={t("days")} />
-      <span className="text-muted">:</span>
-      <TimeUnit value={hours} label={t("hours")} />
-      <span className="text-muted">:</span>
-      <TimeUnit value={minutes} label={t("minutes")} />
-      <span className="text-muted">:</span>
-      <TimeUnit value={seconds} label={t("seconds")} />
-    </div>
-  );
-}
-
-function TimeUnit({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="flex flex-col items-center">
-      <span className="text-lg font-semibold">{String(value).padStart(2, "0")}</span>
-      <span className="text-[10px] uppercase text-muted">{label}</span>
-    </div>
+    <p className="text-xs font-medium text-indigo-600 tabular-nums">
+      {prefix} {time.days}{dU} {String(time.hours).padStart(2, "0")}{hU}{" "}
+      {String(time.minutes).padStart(2, "0")}{mU} {String(time.seconds).padStart(2, "0")}{sU}
+      {suffix ? ` ${suffix}` : ""}
+    </p>
   );
 }
