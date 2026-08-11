@@ -97,7 +97,7 @@ export default async function SchedulePage() {
       {/* subtle ambient background */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 [background-image:radial-gradient(circle_at_1px_1px,theme(colors.slate.200)_1px,transparent_0)] [background-size:28px_28px] opacity-60"
+        className="pointer-events-none absolute inset-0 -z-10 [background-image:radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] [background-size:28px_28px] opacity-60"
       />
       <div
         aria-hidden
