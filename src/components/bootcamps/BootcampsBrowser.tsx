@@ -87,7 +87,7 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
     <div className="space-y-6">
       {/* Arama */}
       <div className="relative">
-        <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400">
+        <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted">
           <SearchIcon />
         </span>
         <Input
@@ -95,7 +95,7 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           placeholder={t("searchPlaceholder")}
-          className="rounded-full pl-10 pr-4 py-2.5 shadow-sm border-slate-200 focus:ring-emerald-500 focus:border-emerald-500 [&::-webkit-search-cancel-button]:hidden"
+          className="rounded-full pl-10 pr-4 py-2.5 shadow-sm border-border focus:ring-primary focus:border-primary [&::-webkit-search-cancel-button]:hidden"
         />
       </div>
 
@@ -111,8 +111,8 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
               aria-pressed={active}
               className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-all duration-150 ${
                 active
-                  ? "bg-emerald-600 text-white shadow-sm shadow-emerald-600/20"
-                  : "bg-slate-100 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700"
+                  ? "bg-primary text-background shadow-sm"
+                  : "bg-muted/10 text-muted hover:bg-primary/10 hover:text-primary"
               }`}
             >
               {cat.name}
@@ -142,7 +142,7 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
               setSearchInput("");
               clearFilters();
             }}
-            className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition-colors"
+            className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-muted hover:bg-muted/10 hover:text-text transition-colors"
           >
             <XIcon />
             {t("clearFilters")}
@@ -151,18 +151,18 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
       </div>
 
       {/* Sonuç sayısı */}
-      <p className="text-sm font-medium text-slate-500" aria-live="polite">
+      <p className="text-sm font-medium text-muted" aria-live="polite">
         {t("resultCount", { count: results.length })}
       </p>
 
       {/* Sonuçlar */}
       {results.length === 0 ? (
-        <div className="flex flex-col items-center rounded-2xl border border-dashed border-slate-200 bg-slate-50/50 py-16 text-center">
-          <span className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white text-slate-300 shadow-sm">
+        <div className="flex flex-col items-center rounded-2xl border border-dashed border-border bg-muted/5 py-16 text-center">
+          <span className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-background text-muted shadow-sm">
             <EmptyIcon />
           </span>
-          <p className="font-medium text-slate-700">{t("noResults")}</p>
-          <p className="mt-1 text-sm text-slate-400">{t("noResultsHint")}</p>
+          <p className="font-medium text-text">{t("noResults")}</p>
+          <p className="mt-1 text-sm text-muted">{t("noResultsHint")}</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -25,12 +25,14 @@ function cellIntensity(i: number) {
   return (i * 37 + (i % 7) * 13) % 5; // 0 (empty) .. 4 (brightest)
 }
 
+// Token-based, theme-aware: level 0 uses a faint neutral tint, 1-4 ramp
+// up through the "success" accent so it reads correctly in both themes.
 const INTENSITY_CLASSES = [
-  "bg-white/[0.04]",
-  "bg-emerald-500/20",
-  "bg-emerald-500/40",
-  "bg-emerald-400/65",
-  "bg-emerald-400",
+  "bg-muted/10",
+  "bg-success/20",
+  "bg-success/40",
+  "bg-success/65",
+  "bg-success",
 ];
 
 function CommitHeatmap() {
@@ -89,48 +91,29 @@ function CodeLaptopSilhouette() {
       viewBox="0 0 640 440"
       className="absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 w-[720px] max-w-none opacity-[0.09]"
     >
-      {/* screen */}
-      <rect
-        x={screenX}
-        y={screenY}
-        width={screenW}
-        height={screenH}
-        rx={16}
-        fill="none"
-        stroke="white"
-        strokeWidth={3}
-      />
-      {/* code lines inside the screen */}
-      {Array.from({ length: lineCount }).map((_, i) => {
-        const w = (lineWidth(i) / 100) * (screenW - padding * 2);
-        return (
-          <rect
-            key={i}
-            x={screenX + padding}
-            y={screenY + padding + i * lineGap}
-            width={w}
-            height={lineHeight}
-            rx={2}
-            fill="#34D399"
-          />
-        );
-      })}
-      {/* base / keyboard */}
-      <path
-        d="M20 372 L620 372 L580 410 L60 410 Z"
-        fill="none"
-        stroke="white"
-        strokeWidth={3}
-        strokeLinejoin="round"
-      />
-      <line
-        x1={screenX}
-        y1={screenY + screenH}
-        x2={screenX + screenW}
-        y2={screenY + screenH}
-        stroke="white"
-        strokeWidth={3}
-      />
+      {/* screen + base outline — uses the muted token via currentColor */}
+      <g className="text-muted" fill="none" stroke="currentColor" strokeWidth={3}>
+        <rect x={screenX} y={screenY} width={screenW} height={screenH} rx={16} />
+        <path d="M20 372 L620 372 L580 410 L60 410 Z" strokeLinejoin="round" />
+        <line x1={screenX} y1={screenY + screenH} x2={screenX + screenW} y2={screenY + screenH} />
+      </g>
+
+      {/* code lines inside the screen — uses the success token via currentColor */}
+      <g className="text-success" fill="currentColor">
+        {Array.from({ length: lineCount }).map((_, i) => {
+          const w = (lineWidth(i) / 100) * (screenW - padding * 2);
+          return (
+            <rect
+              key={i}
+              x={screenX + padding}
+              y={screenY + padding + i * lineGap}
+              width={w}
+              height={lineHeight}
+              rx={2}
+            />
+          );
+        })}
+      </g>
     </svg>
   );
 }
@@ -147,27 +130,22 @@ export default function BootcampsPage() {
         }
       `}</style>
 
-      <section
-        className="relative overflow-hidden"
-        style={{ backgroundColor: "#0D1117" }}
-      >
+      <section className="relative overflow-hidden bg-background">
         <CodeLaptopSilhouette />
         <CommitHeatmap />
 
+        {/* fades toward the page background so it blends into the content below,
+            in either theme, since it targets the same `background` token */}
         <div
           aria-hidden
-          className="absolute inset-0 z-10"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(13,17,23,0.55) 0%, rgba(13,17,23,0.9) 60%, #0D1117 100%)",
-          }}
+          className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/80 to-background"
         />
 
         <div className="relative z-20 max-w-4xl mx-auto px-4 pt-24 pb-32 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-text">
             {t("title")}
           </h1>
-          <p className="mt-4 text-slate-300 max-w-xl mx-auto">
+          <p className="mt-4 text-muted max-w-xl mx-auto">
             {t("subtitle", { count: bootcamps.length })}
           </p>
         </div>

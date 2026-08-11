@@ -60,11 +60,10 @@ export function CustomSelect({ value, options, onChange, className = "" }: Custo
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        style={{ border: "1.5px solid #E2E8F0", borderRadius: "12px" }}
-        className="flex items-center gap-2 bg-white pl-4 pr-3 py-2.5 text-sm font-medium text-slate-700 shadow-sm hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        className="flex items-center gap-2 rounded-xl border border-border bg-background pl-4 pr-3 py-2.5 text-sm font-medium text-text shadow-sm hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-primary"
       >
         <span>{selected?.label}</span>
-        <span className={`text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}>
+        <span className={`text-muted transition-transform ${open ? "rotate-180" : ""}`}>
           <ChevronIcon />
         </span>
       </button>
@@ -72,7 +71,7 @@ export function CustomSelect({ value, options, onChange, className = "" }: Custo
       {open && (
         <div
           role="listbox"
-          className="absolute left-0 z-30 mt-2 min-w-full overflow-hidden rounded-xl border border-slate-100 bg-white py-1.5 shadow-lg shadow-slate-900/10"
+          className="absolute left-0 z-30 mt-2 min-w-full overflow-hidden rounded-xl border border-border bg-background py-1.5 shadow-lg"
         >
           {options.map((opt) => {
             const isSelected = opt.value === value;
@@ -88,8 +87,8 @@ export function CustomSelect({ value, options, onChange, className = "" }: Custo
                 }}
                 className={`flex w-full items-center justify-between gap-3 whitespace-nowrap px-4 py-2 text-left text-sm transition-colors ${
                   isSelected
-                    ? "bg-emerald-50 font-medium text-emerald-700"
-                    : "text-slate-600 hover:bg-slate-50"
+                    ? "bg-primary/10 font-medium text-primary"
+                    : "text-muted hover:bg-muted/10 hover:text-text"
                 }`}
               >
                 {opt.label}
