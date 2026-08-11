@@ -21,13 +21,13 @@ export function BootcampCard({ bootcamp }: BootcampCardProps) {
   return (
     <Link href={`/bootcamps/${bootcamp.slug}`} className="block group h-full">
       <Card className="h-full flex flex-col overflow-hidden p-0 transition-shadow hover:shadow-lg">
-        <div className="relative h-48 w-full">
+        <div className="relative h-48 w-full overflow-hidden">
           <Image
             src={bootcamp.heroImage}
             alt={bootcamp.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
           />
         </div>
         <div className="p-4 space-y-2 flex-1 flex flex-col">
