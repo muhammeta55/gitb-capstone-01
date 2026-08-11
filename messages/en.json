@@ -165,14 +165,25 @@
     }
   },
   "schedulePage": {
-    "title": "Schedule",
-    "subtitle": "View upcoming cohorts and their start dates.",
+    "title": "Upcoming Bootcamps",
+    "subtitle": "Browse our upcoming cohorts and find the perfect program for your career.",
+    "eyebrow": "Upcoming Programs",
+    "starts": "Starts",
+    "ends": "Ends",
+    "viewDetails": "View Course Details",
+    "statusClosed": "Enrollment Closed",
+    "appliesWhenActive": "Applications open when the cohort becomes active.",
+    "seatsLeft": "{count, plural, one {# spot left} other {# spots left}}",
     "started": "Started",
-    "days": "days",
-    "hours": "hours",
-    "minutes": "minutes",
-    "seconds": "seconds",
-    "seatsLeft": "{count} seats left"
+    "startsInPrefix": "Starts in",
+    "startsInSuffix": "",
+    "daysUnit": "d",
+    "hoursUnit": "h",
+    "minutesUnit": "m",
+    "secondsUnit": "s",
+    "weeksCount": "{count, plural, one {# week program} other {# week program}}"
+  
+
   },
   "errorState": {
     "title": "Something went wrong",

@@ -165,14 +165,24 @@
     }
   },
   "schedulePage": {
-    "title": "Program Takvimi",
-    "subtitle": "Yaklaşan kohortları ve başlangıç tarihlerini görün.",
-    "started": "Başladı",
-    "days": "gün",
-    "hours": "saat",
-    "minutes": "dk",
-    "seconds": "sn",
-    "seatsLeft": "{count} koltuk kaldı"
+  "title": "Yaklaşan Bootcamp'ler",
+  "subtitle": "Yaklaşan dönemlerimize göz atın ve kariyeriniz için en uygun programı bulun.",
+  "eyebrow": "Yaklaşan Programlar",
+  "starts": "Başlangıç",
+  "ends": "Bitiş",
+  "viewDetails": "Kurs Detaylarını Gör",
+  "statusClosed": "Kayıtlar Kapandı",
+  "appliesWhenActive": "Başvurular, sınıf aktif hale geldiğinde açılır.",
+  "seatsLeft": "{count, plural, other {# kontenjan kaldı}}",
+  "started": "Başladı",
+  "startsInPrefix": "Başlangıca",
+  "startsInSuffix": "kaldı",
+  "daysUnit": "g",
+  "hoursUnit": "sa",
+  "minutesUnit": "dk",
+  "secondsUnit": "sn",
+  "weeksCount": "{count, plural, other {# haftalık program}}"
+
   },
   "errorState": {
     "title": "Bir şeyler yanlış gitti",
