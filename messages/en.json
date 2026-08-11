@@ -114,7 +114,8 @@
     "columnAccount": "Account",
     "login": "Login",
     "register": "Register",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "dashboard": "Dashboard"
   },
   "bootcampsPage": {
     "title": "Bootcamps",
@@ -355,6 +356,27 @@
     "schedule": {
       "title": "Schedule | GITBootcamp",
       "description": "View upcoming bootcamp cohorts and start dates."
+    },
+    "dashboard": {
+      "title": "Student Dashboard | GITBootcamp",
+      "description": "Track your progress, upcoming sessions, and certificate status."
     }
+  },
+  "dashboardPage": {
+    "welcomeBack": "Welcome back",
+    "subtitle": "Here's where you left off.",
+    "mockNotice": "This is a static preview — no real account data is connected yet.",
+    "enrolledProgram": "Your program",
+    "progressLabel": "{percent}% complete",
+    "moduleLabel": "Module {current} of {total}",
+    "continueLearning": "Continue learning",
+    "upcomingSessions": "Upcoming live sessions",
+    "certificateStatus": "Certificate",
+    "certificateInProgress": "In progress — awarded on completion",
+    "quickStats": "Your stats",
+    "statAssignments": "Assignments submitted",
+    "statHours": "Hours logged",
+    "statStreak": "Day streak"
   }
+  
 }

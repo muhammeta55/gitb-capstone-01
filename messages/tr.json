@@ -114,7 +114,8 @@
     "columnAccount": "Hesap",
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
-    "copyright": "Tüm hakları saklıdır."
+    "copyright": "Tüm hakları saklıdır.",
+    "dashboard": "Panel"
   },
   "bootcampsPage": {
     "title": "Bootcamp'ler",
@@ -355,6 +356,26 @@
     "schedule": {
       "title": "Program Takvimi | GITBootcamp",
       "description": "Yaklaşan bootcamp dönemlerini ve başlangıç tarihlerini görüntüleyin."
+    },
+    "dashboard": {
+      "title": "Öğrenci Paneli | GITBootcamp",
+      "description": "İlerlemenizi, yaklaşan oturumları ve sertifika durumunuzu takip edin."
     }
+  },
+  "dashboardPage": {
+    "welcomeBack": "Tekrar hoş geldin",
+    "subtitle": "Kaldığın yerden devam et.",
+    "mockNotice": "Bu statik bir önizlemedir — henüz gerçek hesap verisine bağlı değildir.",
+    "enrolledProgram": "Programın",
+    "progressLabel": "%{percent} tamamlandı",
+    "moduleLabel": "{total} modülden {current}.",
+    "continueLearning": "Öğrenmeye devam et",
+    "upcomingSessions": "Yaklaşan canlı oturumlar",
+    "certificateStatus": "Sertifika",
+    "certificateInProgress": "Devam ediyor — tamamlanınca verilecek",
+    "quickStats": "İstatistiklerin",
+    "statAssignments": "Teslim edilen ödevler",
+    "statHours": "Kayıtlı saat",
+    "statStreak": "Günlük seri"
   }
 }
