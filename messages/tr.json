@@ -172,19 +172,22 @@
     "seconds": "sn",
     "seatsLeft": "{count} koltuk kaldı"
   },
-
+  "errorState": {
+    "title": "Bir şeyler yanlış gitti",
+    "description": "Bu sayfa yüklenemedi. Lütfen tekrar deneyin.",
+    "retry": "Tekrar dene"
+  },
   "notFoundPage": {
-  "title": "Sayfa bulunamadı",
-  "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
-  "backHome": "Ana sayfaya dön",
-  "popularPages": "Ya da bu popüler sayfalara göz atın",
-  "links": {
-    "bootcamps": "Bootcamp'lere göz at",
-    "schedule": "Programı görüntüle",
-    "home": "Ana sayfa"
-  }
-},
-  
+    "title": "Sayfa bulunamadı",
+    "subtitle": "Aradığınız sayfa mevcut değil veya taşınmış olabilir.",
+    "backHome": "Ana sayfaya dön",
+    "popularPages": "Ya da bu popüler sayfalara göz atın",
+    "links": {
+      "bootcamps": "Bootcamp'lere göz at",
+      "schedule": "Programı görüntüle",
+      "home": "Ana sayfa"
+    }
+  },
   "about": {
     "mission": {
       "title": "Misyonumuz",
@@ -262,10 +265,10 @@
       "passwordRequired": "Şifre zorunludur",
       "confirmPasswordRequired": "Lütfen şifrenizi tekrar girin",
       "passwordMismatch": "Şifreler eşleşmiyor",
-      "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz"
+      "termsRequired": "Kullanım Koşulları'nı kabul etmelisiniz",
+      "emailTaken": "Bu e-posta zaten kayıtlı"
     }
   },
-
   "contactPage": {
     "title": "Bize ulaşın",
     "subtitle": "Bootcamp'ler, iş birlikleri ya da başka bir konu hakkında — her mesajı okuyoruz.",
@@ -293,6 +296,7 @@
       "hoursValue": "Pzt–Cum, 9:00–18:00 CET"
     }
   },
+
   "cookieConsent": {
     "title": "Çerez tercihleri",
     "message": "Siteyi düzgün çalıştırmak ve nasıl kullanıldığını anlamak için çerez kullanıyoruz. Tümünü kabul edebilir, zorunlu olmayanları reddedebilir ya da tercihlerini yönetebilirsin.",
@@ -307,5 +311,35 @@
     "analyticsDescription": "Ziyaretçilerin siteyi nasıl kullandığını anlamamıza yardımcı olur, böylece geliştirebiliriz.",
     "back": "Geri",
     "savePreferences": "Tercihleri kaydet"
+  },
+  "meta": {
+    "home": {
+      "title": "GITBootcamp — Teknoloji kariyerine kod yazarak adım at",
+      "description": "Web geliştirme, veri ve ürün tasarımı alanlarında canlı, proje tabanlı bootcamp'ler."
+    },
+    "about": {
+      "title": "Hakkımızda | GITBootcamp",
+      "description": "GITBootcamp'in misyonu, ekibi ve hikayesi hakkında bilgi edinin."
+    },
+    "bootcamps": {
+      "title": "Tüm Bootcamp'ler | GITBootcamp",
+      "description": "Tüm bootcamp'lere göz atın ve size uygun programı bulun."
+    },
+    "contact": {
+      "title": "İletişim | GITBootcamp",
+      "description": "Sorularınız veya iş birlikleri için GITBootcamp ile iletişime geçin."
+    },
+    "login": {
+      "title": "Giriş Yap | GITBootcamp",
+      "description": "GITBootcamp hesabınıza giriş yapın."
+    },
+    "register": {
+      "title": "Kayıt Ol | GITBootcamp",
+      "description": "GITBootcamp hesabınızı oluşturun ve öğrenmeye başlayın."
+    },
+    "schedule": {
+      "title": "Program Takvimi | GITBootcamp",
+      "description": "Yaklaşan bootcamp dönemlerini ve başlangıç tarihlerini görüntüleyin."
+    }
   }
 }

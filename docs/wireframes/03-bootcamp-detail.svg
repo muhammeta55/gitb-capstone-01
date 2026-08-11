@@ -1,0 +1,16 @@
+<svg width="680" height="620" viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="620" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .teal { fill:#e0f2f1; stroke:#4db6ac; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="box" x="40" y="92" width="600" height="70" rx="4"/><text class="th" x="60" y="112">Hero</text><text class="ts" x="60" y="130">Title, category, level, duration, format, rating</text>
+<rect class="box" x="40" y="174" width="360" height="220" rx="4"/><text class="th" x="60" y="194">Curriculum</text><text class="ts" x="60" y="212">Accordion module list</text>
+<rect class="teal" x="420" y="174" width="220" height="220" rx="4"/><text class="th" x="440" y="194">Sidebar (sticky)</text><text class="ts" x="440" y="212">Price, next cohort, enroll CTA</text>
+<rect class="box" x="40" y="410" width="600" height="70" rx="4"/><text class="th" x="60" y="430">Instructor card</text>
+<rect class="box" x="40" y="492" width="600" height="60" rx="4"/><text class="th" x="60" y="522">Reviews for this program</text>
+<rect class="box" x="40" y="564" width="600" height="40" rx="4"/><text class="th" x="60" y="584">Related bootcamps</text>
+</svg>

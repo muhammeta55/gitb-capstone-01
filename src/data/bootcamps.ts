@@ -14,7 +14,7 @@ export const bootcamps: Bootcamp[] = [
     studentCount: 342,
     shortDescription: "Build production-ready web apps with React and Node.js.",
     description: "A 12-week intensive program covering HTML, CSS, JavaScript, React, Node.js and databases, ending with a deployed capstone project.",
-    heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
+    heroImage: "https://images.unsplash.com/photo-1776521796613-564c9f7d02e7?w=1600&q=80",
     tags: ["React", "Node.js", "TypeScript"],
     curriculum: [
       {
@@ -59,7 +59,7 @@ export const bootcamps: Bootcamp[] = [
     studentCount: 198,
     shortDescription: "From Python basics to machine learning models.",
     description: "Learn pandas, NumPy, visualization and core ML algorithms through real datasets and weekly projects.",
-    heroImage:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
+    heroImage: "https://images.unsplash.com/photo-1662638600476-d563fffbb072?w=1600&q=80",
     tags: ["Python", "Pandas", "Machine Learning"],
     curriculum: [
       {
@@ -149,7 +149,7 @@ export const bootcamps: Bootcamp[] = [
     studentCount: 121,
     shortDescription: "AWS, Docker, Kubernetes and CI/CD pipelines.",
     description: "An advanced track for engineers who want to own infrastructure, covering containerization, orchestration and automated deployment.",
-    heroImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=80",
+    heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80",
     tags: ["AWS", "Docker", "Kubernetes"],
     curriculum: [
       {
@@ -195,7 +195,7 @@ export const bootcamps: Bootcamp[] = [
     studentCount: 154,
     shortDescription: "Learn to identify, prevent and respond to security threats.",
     description: "Covers network security, ethical hacking basics, threat modeling and incident response through hands-on labs.",
-    heroImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80",
+    heroImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1600&q=80",
     tags: ["Security", "Networking", "Linux"],
     curriculum: [
       {
@@ -285,7 +285,7 @@ export const bootcamps: Bootcamp[] = [
     studentCount: 289,
     shortDescription: "SEO, paid ads and content strategy that actually converts.",
     description: "A practical program covering SEO, Google Ads, social media strategy and analytics, with a live campaign as final project.",
-    heroImage: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1600&q=80",
+    heroImage: "https://images.unsplash.com/photo-1582005450386-52b25f82d9bb?w=1600&q=80",
     tags: ["SEO", "Google Ads", "Analytics"],
     curriculum: [
       {
