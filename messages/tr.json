@@ -281,6 +281,9 @@
       "submitting": "Gönderiliyor...",
       "successTitle": "Mesaj gönderildi",
       "successDescription": "Ulaştığın için teşekkürler — bir iş günü içinde sana geri döneceğiz.",
+      "errorTitle": "Bir şeyler ters gitti",
+      "errorDescription": "Mesajını gönderemedik. Lütfen tekrar dene.",
+      "tryAgain": "Tekrar dene",
       "errors": {
         "required": "Bu alan zorunludur.",
         "invalidEmail": "Geçerli bir e-posta adresi gir.",
