@@ -1,0 +1,19 @@
+<svg width="680" height="860" viewBox="0 0 680 860" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="860" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="box" x="40" y="92" width="600" height="90" rx="4"/><text class="th" x="60" y="112">Hero</text><text class="ts" x="60" y="130">Title, subtitle, 2 CTA buttons, bg image</text>
+<rect class="box" x="40" y="194" width="600" height="44" rx="4"/><text class="th" x="60" y="220">Stats strip (animated counters)</text>
+<rect class="box" x="40" y="250" width="600" height="90" rx="4"/><text class="th" x="60" y="270">Featured programs</text><text class="ts" x="60" y="288">3-4 bootcamp cards</text>
+<rect class="box" x="40" y="352" width="600" height="70" rx="4"/><text class="th" x="60" y="372">Category grid</text><text class="ts" x="60" y="390">8 categories</text>
+<rect class="box" x="40" y="434" width="600" height="70" rx="4"/><text class="th" x="60" y="454">Features</text><text class="ts" x="60" y="472">6 feature cards</text>
+<rect class="box" x="40" y="516" width="600" height="60" rx="4"/><text class="th" x="60" y="550">How it works (4 steps)</text>
+<rect class="box" x="40" y="588" width="600" height="70" rx="4"/><text class="th" x="60" y="608">Instructors</text><text class="ts" x="60" y="626">4 instructor cards</text>
+<rect class="box" x="40" y="670" width="600" height="70" rx="4"/><text class="th" x="60" y="690">Testimonials</text><text class="ts" x="60" y="708">6 reviews, grid/carousel</text>
+<rect class="box" x="40" y="752" width="600" height="60" rx="4"/><text class="th" x="60" y="786">Pricing (3 plans) + newsletter + closing CTA</text>
+<rect class="box" x="40" y="824" width="600" height="24" rx="4"/><text class="th" x="60" y="840">Footer</text>
+</svg>

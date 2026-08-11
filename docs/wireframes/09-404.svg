@@ -1,0 +1,14 @@
+<svg width="680" height="300" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="300" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .coral { fill:#ffe0e0; stroke:#ef9a9a; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="coral" x="190" y="110" width="300" height="150" rx="4"/>
+<text class="th" x="340" y="150" text-anchor="middle">404 — Page not found</text>
+<text class="ts" x="340" y="176" text-anchor="middle">Message + back to home link</text>
+<text class="ts" x="340" y="200" text-anchor="middle">Links to popular pages</text>
+</svg>

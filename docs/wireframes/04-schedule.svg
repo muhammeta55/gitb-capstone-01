@@ -1,0 +1,15 @@
+<svg width="680" height="380" viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="380" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .coral { fill:#ffe0e0; stroke:#ef9a9a; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="coral" x="40" y="92" width="600" height="60" rx="4"/><text class="th" x="60" y="112">Countdown to next cohort</text><text class="ts" x="60" y="130">Days / hours / minutes / seconds, live</text>
+<text class="ts" x="40" y="176">Grouped by month</text>
+<rect class="box" x="40" y="188" width="600" height="42" rx="4"/><text class="ts" x="60" y="213">Cohort row: bootcamp, dates, seats left, format</text>
+<rect class="box" x="40" y="240" width="600" height="42" rx="4"/><text class="ts" x="60" y="265">Cohort row: bootcamp, dates, seats left, format</text>
+<rect class="box" x="40" y="292" width="600" height="42" rx="4"/><text class="ts" x="60" y="317">Cohort row: bootcamp, dates, seats left, format</text>
+</svg>

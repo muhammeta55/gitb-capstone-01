@@ -1,0 +1,19 @@
+<svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="400" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .teal { fill:#e0f2f1; stroke:#4db6ac; stroke-width:1; }
+  .purple { fill:#ede7f6; stroke:#9575cd; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="box" x="190" y="100" width="300" height="260" rx="4"/>
+<text class="th" x="340" y="128" text-anchor="middle">Register</text>
+<rect class="teal" x="210" y="148" width="260" height="28" rx="4"/><text class="ts" x="220" y="166">Name</text>
+<rect class="teal" x="210" y="184" width="260" height="28" rx="4"/><text class="ts" x="220" y="202">Email</text>
+<rect class="teal" x="210" y="220" width="260" height="28" rx="4"/><text class="ts" x="220" y="238">Password + strength meter</text>
+<rect class="teal" x="210" y="256" width="260" height="28" rx="4"/><text class="ts" x="220" y="274">Confirm password</text>
+<rect class="box" x="210" y="292" width="14" height="14" rx="2"/><text class="ts" x="230" y="303">I agree to the terms (required)</text>
+<rect class="purple" x="210" y="316" width="260" height="30" rx="4"/><text class="th" x="340" y="336" text-anchor="middle">Create account</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="680" height="420" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<rect width="680" height="420" fill="#ffffff"/>
+<style>
+  .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:1; }
+  .teal { fill:#e0f2f1; stroke:#4db6ac; stroke-width:1; }
+  .th { fill:#0f172a; font-size:13px; font-weight:bold; }
+  .ts { fill:#64748b; font-size:11px; }
+</style>
+<rect class="box" x="40" y="40" width="600" height="40" rx="4"/><text class="th" x="60" y="65">Header</text>
+<rect class="box" x="40" y="92" width="350" height="220" rx="4"/><text class="th" x="60" y="112">Contact form</text><text class="ts" x="60" y="130">Name, email, subject, message</text><text class="ts" x="60" y="148">Validation + loading + success state</text>
+<rect class="teal" x="410" y="92" width="230" height="100" rx="4"/><text class="th" x="430" y="112">Alt contact info</text>
+<rect class="teal" x="410" y="204" width="230" height="108" rx="4"/><text class="th" x="430" y="224">Map / location image</text>
+</svg>
