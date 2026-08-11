@@ -38,7 +38,12 @@ export function CohortCountdown({ startDate, labels }: CohortCountdownProps) {
   const [time, setTime] = useState<TimeParts | null>(null);
 
   useEffect(() => {
+    // Deliberately setting state synchronously here: `time` starts as null
+    // so the server and first client render match exactly (no hydration
+    // mismatch), and the real value is only computed once mounted.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTime(getTimeParts(startDate));
+
     const interval = setInterval(() => {
       setTime(getTimeParts(startDate));
     }, 1000);
@@ -52,8 +57,8 @@ export function CohortCountdown({ startDate, labels }: CohortCountdownProps) {
 
   if (time.started) {
     return (
-      <p className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600">
-        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+      <p className="inline-flex items-center gap-1.5 text-xs font-medium text-success">
+        <span className="h-1.5 w-1.5 rounded-full bg-success" />
         {labels?.started ?? "Started"}
       </p>
     );
@@ -67,7 +72,7 @@ export function CohortCountdown({ startDate, labels }: CohortCountdownProps) {
   const sU = labels?.secondsUnit ?? "s";
 
   return (
-    <p className="text-xs font-medium text-indigo-600 tabular-nums">
+    <p className="text-xs font-medium text-primary tabular-nums">
       {prefix} {time.days}{dU} {String(time.hours).padStart(2, "0")}{hU}{" "}
       {String(time.minutes).padStart(2, "0")}{mU} {String(time.seconds).padStart(2, "0")}{sU}
       {suffix ? ` ${suffix}` : ""}

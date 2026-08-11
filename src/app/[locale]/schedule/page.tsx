@@ -93,7 +93,7 @@ export default async function SchedulePage() {
   const groups = groupByMonth(locale);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-white">
+    <main className="relative min-h-screen overflow-hidden bg-background">
       {/* subtle ambient background */}
       <div
         aria-hidden
@@ -101,29 +101,29 @@ export default async function SchedulePage() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-100 via-indigo-50 to-transparent blur-3xl"
+        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-3xl"
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         {/* Header */}
         <div className="mb-12 text-center">
-          <span className="inline-block text-xs font-semibold tracking-[0.2em] text-indigo-600 uppercase mb-3">
+          <span className="inline-block text-xs font-semibold tracking-[0.2em] text-primary uppercase mb-3">
             {t("eyebrow")}
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-text">
             {t("title")}
           </h1>
-          <p className="mt-3 text-slate-500 max-w-xl mx-auto">{t("subtitle")}</p>
+          <p className="mt-3 text-muted max-w-xl mx-auto">{t("subtitle")}</p>
         </div>
 
         <div className="space-y-14">
           {Array.from(groups.entries()).map(([month, items]) => (
             <section key={month}>
               <div className="flex items-center gap-4 mb-5">
-                <h2 className="text-sm font-semibold text-slate-400 tracking-wide capitalize whitespace-nowrap">
+                <h2 className="text-sm font-semibold text-muted tracking-wide capitalize whitespace-nowrap">
                   {month}
                 </h2>
-                <div className="h-px flex-1 bg-slate-200" />
+                <div className="h-px flex-1 bg-border" />
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -134,19 +134,19 @@ export default async function SchedulePage() {
                   return (
                     <div
                       key={cohort.id}
-                      className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300"
+                      className="group relative flex flex-col rounded-2xl border border-border bg-background p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     >
                       <div className="flex items-start justify-between gap-2 mb-1">
-                        <h3 className="font-semibold text-slate-900 leading-snug">
+                        <h3 className="font-semibold text-text leading-snug">
                           {bootcamp.title}
                         </h3>
                         <span
                           className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-medium ring-1 ring-inset ${
                             closed
-                              ? "bg-slate-100 text-slate-500 ring-slate-200"
+                              ? "bg-muted/10 text-muted ring-border"
                               : lowSeats
-                              ? "bg-amber-50 text-amber-700 ring-amber-200"
-                              : "bg-emerald-50 text-emerald-700 ring-emerald-200"
+                              ? "bg-warning/10 text-warning ring-warning/30"
+                              : "bg-success/10 text-success ring-success/30"
                           }`}
                         >
                           {closed
@@ -155,7 +155,7 @@ export default async function SchedulePage() {
                         </span>
                       </div>
 
-                      <div className="space-y-2 text-sm text-slate-600 mt-3 mb-4">
+                      <div className="space-y-2 text-sm text-muted mt-3 mb-4">
                         <div className="flex items-center gap-2">
                           <CalendarIcon />
                           <span>
@@ -206,13 +206,13 @@ export default async function SchedulePage() {
 
                       <button
                         type="button"
-                        className="mt-auto w-full rounded-lg border border-slate-300 py-2.5 text-sm font-medium text-slate-800 transition-colors group-hover:border-indigo-300 group-hover:bg-indigo-50 group-hover:text-indigo-700"
+                        className="mt-auto w-full rounded-lg border border-border py-2.5 text-sm font-medium text-text transition-colors group-hover:border-primary group-hover:bg-primary/10 group-hover:text-primary"
                       >
                         {t("viewDetails")}
                       </button>
 
                       {!closed ? null : (
-                        <p className="mt-2 text-center text-[11px] text-slate-400">
+                        <p className="mt-2 text-center text-[11px] text-muted">
                           {t("appliesWhenActive")}
                         </p>
                       )}
