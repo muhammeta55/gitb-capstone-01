@@ -57,6 +57,7 @@ export function Footer() {
       links: [
         { href: "/login", label: t("login") },
         { href: "/register", label: t("register") },
+        { href: "/dashboard", label: t("dashboard") },
       ],
     },
   ];

@@ -11,8 +11,10 @@
   },
   "landing": {
     "hero": {
-      "title": "Teknolojiye 4 yılda değil, 12 haftada adım at.",
-      "subtitle": "Web geliştirme, veri ve ürün tasarımı alanlarında canlı, proje tabanlı bootcamp'ler — hâlâ kod yazan mühendisler tarafından veriliyor.",
+      "badge": "Canlı, Proje Tabanlı Bootcamp'ler",
+      "titlePrefix": "Kariyerini Değiştirmeye Hazır Mısın,",
+      "titleHighlight": "12 Haftada?",
+      "subtitle": "Bilgisayar mühendisliği diploması ya da deneyim gerekmiyor. Sadece teori anlatmayan, hâlâ kod yazan mühendislerin verdiği canlı bootcamp'ler.",
       "ctaPrimary": "Bootcamp'leri keşfet",
       "ctaSecondary": "Bir danışmanla konuş"
     },
@@ -112,7 +114,8 @@
     "columnAccount": "Hesap",
     "login": "Giriş Yap",
     "register": "Kayıt Ol",
-    "copyright": "Tüm hakları saklıdır."
+    "copyright": "Tüm hakları saklıdır.",
+    "dashboard": "Panel"
   },
   "bootcampsPage": {
     "title": "Bootcamp'ler",
@@ -163,14 +166,24 @@
     }
   },
   "schedulePage": {
-    "title": "Program Takvimi",
-    "subtitle": "Yaklaşan kohortları ve başlangıç tarihlerini görün.",
-    "started": "Başladı",
-    "days": "gün",
-    "hours": "saat",
-    "minutes": "dk",
-    "seconds": "sn",
-    "seatsLeft": "{count} koltuk kaldı"
+  "title": "Yaklaşan Bootcamp'ler",
+  "subtitle": "Yaklaşan dönemlerimize göz atın ve kariyeriniz için en uygun programı bulun.",
+  "eyebrow": "Yaklaşan Programlar",
+  "starts": "Başlangıç",
+  "ends": "Bitiş",
+  "viewDetails": "Kurs Detaylarını Gör",
+  "statusClosed": "Kayıtlar Kapandı",
+  "appliesWhenActive": "Başvurular, sınıf aktif hale geldiğinde açılır.",
+  "seatsLeft": "{count, plural, other {# kontenjan kaldı}}",
+  "started": "Başladı",
+  "startsInPrefix": "Başlangıca",
+  "startsInSuffix": "kaldı",
+  "daysUnit": "g",
+  "hoursUnit": "sa",
+  "minutesUnit": "dk",
+  "secondsUnit": "sn",
+  "weeksCount": "{count, plural, other {# haftalık program}}"
+
   },
   "errorState": {
     "title": "Bir şeyler yanlış gitti",
@@ -281,6 +294,9 @@
       "submitting": "Gönderiliyor...",
       "successTitle": "Mesaj gönderildi",
       "successDescription": "Ulaştığın için teşekkürler — bir iş günü içinde sana geri döneceğiz.",
+      "errorTitle": "Bir şeyler ters gitti",
+      "errorDescription": "Mesajını gönderemedik. Lütfen tekrar dene.",
+      "tryAgain": "Tekrar dene",
       "errors": {
         "required": "Bu alan zorunludur.",
         "invalidEmail": "Geçerli bir e-posta adresi gir.",
@@ -295,6 +311,22 @@
       "hoursLabel": "Çalışma saatleri",
       "hoursValue": "Pzt–Cum, 9:00–18:00 CET"
     }
+  },
+
+  "cookieConsent": {
+    "title": "Çerez tercihleri",
+    "message": "Siteyi düzgün çalıştırmak ve nasıl kullanıldığını anlamak için çerez kullanıyoruz. Tümünü kabul edebilir, zorunlu olmayanları reddedebilir ya da tercihlerini yönetebilirsin.",
+    "acceptAll": "Tümünü kabul et",
+    "rejectAll": "Zorunlu olmayanları reddet",
+    "managePreferences": "Tercihleri yönet",
+    "preferencesTitle": "Çerez tercihlerini yönet",
+    "preferencesDescription": "Zorunlu çerezler her zaman açıktır, çünkü site bunlar olmadan düzgün çalışamaz. Analitik çerezlere izin verip vermeyeceğini seçebilirsin.",
+    "necessaryTitle": "Zorunlu",
+    "necessaryDescription": "Dil ve tema tercihini hatırlamak gibi temel site işlevleri için gerekli.",
+    "analyticsTitle": "Analitik",
+    "analyticsDescription": "Ziyaretçilerin siteyi nasıl kullandığını anlamamıza yardımcı olur, böylece geliştirebiliriz.",
+    "back": "Geri",
+    "savePreferences": "Tercihleri kaydet"
   },
   "meta": {
     "home": {
@@ -324,6 +356,26 @@
     "schedule": {
       "title": "Program Takvimi | GITBootcamp",
       "description": "Yaklaşan bootcamp dönemlerini ve başlangıç tarihlerini görüntüleyin."
+    },
+    "dashboard": {
+      "title": "Öğrenci Paneli | GITBootcamp",
+      "description": "İlerlemenizi, yaklaşan oturumları ve sertifika durumunuzu takip edin."
     }
+  },
+  "dashboardPage": {
+    "welcomeBack": "Tekrar hoş geldin",
+    "subtitle": "Kaldığın yerden devam et.",
+    "mockNotice": "Bu statik bir önizlemedir — henüz gerçek hesap verisine bağlı değildir.",
+    "enrolledProgram": "Programın",
+    "progressLabel": "%{percent} tamamlandı",
+    "moduleLabel": "{total} modülden {current}.",
+    "continueLearning": "Öğrenmeye devam et",
+    "upcomingSessions": "Yaklaşan canlı oturumlar",
+    "certificateStatus": "Sertifika",
+    "certificateInProgress": "Devam ediyor — tamamlanınca verilecek",
+    "quickStats": "İstatistiklerin",
+    "statAssignments": "Teslim edilen ödevler",
+    "statHours": "Kayıtlı saat",
+    "statStreak": "Günlük seri"
   }
 }

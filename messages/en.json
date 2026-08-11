@@ -11,8 +11,10 @@
   },
   "landing": {
     "hero": {
-      "title": "Code your way into tech — in 12 weeks, not 4 years.",
-      "subtitle": "Live, project-based bootcamps in web development, data, and product design — taught by engineers who still ship code.",
+      "badge": "Live, Project-Based Bootcamps",
+      "titlePrefix": "Ready to Change Your Career",
+      "titleHighlight": "in 12 Weeks?",
+      "subtitle": "No CS degree, no experience, no problem. Live bootcamps taught by engineers who actually ship code — not just teach theory.",
       "ctaPrimary": "Explore bootcamps",
       "ctaSecondary": "Talk to an advisor"
     },
@@ -112,7 +114,8 @@
     "columnAccount": "Account",
     "login": "Login",
     "register": "Register",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "dashboard": "Dashboard"
   },
   "bootcampsPage": {
     "title": "Bootcamps",
@@ -163,14 +166,25 @@
     }
   },
   "schedulePage": {
-    "title": "Schedule",
-    "subtitle": "View upcoming cohorts and their start dates.",
+    "title": "Upcoming Bootcamps",
+    "subtitle": "Browse our upcoming cohorts and find the perfect program for your career.",
+    "eyebrow": "Upcoming Programs",
+    "starts": "Starts",
+    "ends": "Ends",
+    "viewDetails": "View Course Details",
+    "statusClosed": "Enrollment Closed",
+    "appliesWhenActive": "Applications open when the cohort becomes active.",
+    "seatsLeft": "{count, plural, one {# spot left} other {# spots left}}",
     "started": "Started",
-    "days": "days",
-    "hours": "hours",
-    "minutes": "minutes",
-    "seconds": "seconds",
-    "seatsLeft": "{count} seats left"
+    "startsInPrefix": "Starts in",
+    "startsInSuffix": "",
+    "daysUnit": "d",
+    "hoursUnit": "h",
+    "minutesUnit": "m",
+    "secondsUnit": "s",
+    "weeksCount": "{count, plural, one {# week program} other {# week program}}"
+  
+
   },
   "errorState": {
     "title": "Something went wrong",
@@ -281,6 +295,9 @@
       "submitting": "Sending...",
       "successTitle": "Message sent",
       "successDescription": "Thanks for reaching out — we'll get back to you within one business day.",
+      "errorTitle": "Something went wrong",
+      "errorDescription": "We couldn't send your message. Please try again.",
+      "tryAgain": "Try again",
       "errors": {
         "required": "This field is required.",
         "invalidEmail": "Enter a valid email address.",
@@ -295,6 +312,21 @@
       "hoursLabel": "Office hours",
       "hoursValue": "Mon–Fri, 9:00–18:00 CET"
     }
+  },
+  "cookieConsent": {
+    "title": "Cookie preferences",
+    "message": "We use cookies to keep the site running smoothly and to understand how it's used. You can accept all, reject non-essential ones, or manage your preferences.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject non-essential",
+    "managePreferences": "Manage preferences",
+    "preferencesTitle": "Manage cookie preferences",
+    "preferencesDescription": "Necessary cookies are always on since the site can't function properly without them. You can choose whether to allow analytics cookies.",
+    "necessaryTitle": "Necessary",
+    "necessaryDescription": "Required for core site functionality, such as remembering your language and theme.",
+    "analyticsTitle": "Analytics",
+    "analyticsDescription": "Helps us understand how visitors use the site, so we can improve it.",
+    "back": "Back",
+    "savePreferences": "Save preferences"
   },
   "meta": {
     "home": {
@@ -324,6 +356,27 @@
     "schedule": {
       "title": "Schedule | GITBootcamp",
       "description": "View upcoming bootcamp cohorts and start dates."
+    },
+    "dashboard": {
+      "title": "Student Dashboard | GITBootcamp",
+      "description": "Track your progress, upcoming sessions, and certificate status."
     }
+  },
+  "dashboardPage": {
+    "welcomeBack": "Welcome back",
+    "subtitle": "Here's where you left off.",
+    "mockNotice": "This is a static preview — no real account data is connected yet.",
+    "enrolledProgram": "Your program",
+    "progressLabel": "{percent}% complete",
+    "moduleLabel": "Module {current} of {total}",
+    "continueLearning": "Continue learning",
+    "upcomingSessions": "Upcoming live sessions",
+    "certificateStatus": "Certificate",
+    "certificateInProgress": "In progress — awarded on completion",
+    "quickStats": "Your stats",
+    "statAssignments": "Assignments submitted",
+    "statHours": "Hours logged",
+    "statStreak": "Day streak"
   }
+  
 }

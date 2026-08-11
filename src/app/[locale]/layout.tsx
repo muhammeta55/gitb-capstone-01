@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {LocaleHtmlSync} from "@/components/LocaleHtmlSync";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import { ThemeHtmlSync } from "@/components/ThemeHtmlSync";
 import { PageTransition } from "@/components/layout/PageTransition";
 
@@ -56,8 +57,11 @@ export default async function LocaleLayout({
       <ThemeHtmlSync />
       <NextIntlClientProvider messages={messages}>
         <Header />
-        <PageTransition>{children}</PageTransition>
+        <div className="flex-1 flex flex-col">
+          <PageTransition>{children}</PageTransition>
+        </div>
         <Footer />
+        <CookieConsent />
       </NextIntlClientProvider>
     </div>
   );
