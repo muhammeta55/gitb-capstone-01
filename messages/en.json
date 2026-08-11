@@ -296,6 +296,21 @@
       "hoursValue": "Mon–Fri, 9:00–18:00 CET"
     }
   },
+  "cookieConsent": {
+    "title": "Cookie preferences",
+    "message": "We use cookies to keep the site running smoothly and to understand how it's used. You can accept all, reject non-essential ones, or manage your preferences.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject non-essential",
+    "managePreferences": "Manage preferences",
+    "preferencesTitle": "Manage cookie preferences",
+    "preferencesDescription": "Necessary cookies are always on since the site can't function properly without them. You can choose whether to allow analytics cookies.",
+    "necessaryTitle": "Necessary",
+    "necessaryDescription": "Required for core site functionality, such as remembering your language and theme.",
+    "analyticsTitle": "Analytics",
+    "analyticsDescription": "Helps us understand how visitors use the site, so we can improve it.",
+    "back": "Back",
+    "savePreferences": "Save preferences"
+  },
   "meta": {
     "home": {
       "title": "GITBootcamp — Code your way into tech",
