@@ -11,8 +11,10 @@
   },
   "landing": {
     "hero": {
-      "title": "Teknolojiye 4 yılda değil, 12 haftada adım at.",
-      "subtitle": "Web geliştirme, veri ve ürün tasarımı alanlarında canlı, proje tabanlı bootcamp'ler — hâlâ kod yazan mühendisler tarafından veriliyor.",
+      "badge": "Canlı, Proje Tabanlı Bootcamp'ler",
+      "titlePrefix": "Kariyerini Değiştirmeye Hazır Mısın,",
+      "titleHighlight": "12 Haftada?",
+      "subtitle": "Bilgisayar mühendisliği diploması ya da deneyim gerekmiyor. Sadece teori anlatmayan, hâlâ kod yazan mühendislerin verdiği canlı bootcamp'ler.",
       "ctaPrimary": "Bootcamp'leri keşfet",
       "ctaSecondary": "Bir danışmanla konuş"
     },

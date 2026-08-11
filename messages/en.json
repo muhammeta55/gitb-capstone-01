@@ -11,8 +11,10 @@
   },
   "landing": {
     "hero": {
-      "title": "Code your way into tech — in 12 weeks, not 4 years.",
-      "subtitle": "Live, project-based bootcamps in web development, data, and product design — taught by engineers who still ship code.",
+      "badge": "Live, Project-Based Bootcamps",
+      "titlePrefix": "Ready to Change Your Career",
+      "titleHighlight": "in 12 Weeks?",
+      "subtitle": "No CS degree, no experience, no problem. Live bootcamps taught by engineers who actually ship code — not just teach theory.",
       "ctaPrimary": "Explore bootcamps",
       "ctaSecondary": "Talk to an advisor"
     },
