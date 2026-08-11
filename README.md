@@ -2,7 +2,7 @@
 
 A fully rebuilt, bilingual (EN/TR) bootcamp platform frontend, built from scratch for the Global IT Bootcamp frontend capstone project. Built with Next.js App Router, TypeScript, and Tailwind CSS v4.
 
-**Live demo:** _(Vercel deploy URL goes here)_
+**Live demo:** [gitb-capstone-01.vercel.app](https://gitb-capstone-01.vercel.app)
 
 ---
 
@@ -14,6 +14,7 @@ A fully rebuilt, bilingual (EN/TR) bootcamp platform frontend, built from scratc
 - [Folder Structure](#folder-structure)
 - [Architecture Decisions](#architecture-decisions)
 - [Libraries Used](#libraries-used)
+- [Lighthouse Audit](#lighthouse-audit)
 - [Known Issues / Limitations](#known-issues--limitations)
 - [Team & Responsibilities](#team--responsibilities)
 
@@ -29,7 +30,17 @@ A ground-up rebuild of the frontend for Global IT Bootcamp's existing bootcamp p
 
 ### Screenshots
 
-_(Landing page, Bootcamps list, Bootcamp detail, and dark mode screenshots go here)_
+**Landing (light mode)**
+
+![Landing page, light mode](docs/screenshots/landing_light.png)
+
+**Landing (dark mode)**
+
+![Landing page, dark mode](docs/screenshots/landing_dark.png)
+
+**Bootcamps list**
+
+![Bootcamps list page](docs/screenshots/bootcamps.png)
 
 ---
 
@@ -146,6 +157,48 @@ Primitives like `Button`, `Card`, `Input`, and `Badge` live centrally in `src/co
 | **next-intl**     | Best-supported i18n solution for App Router; middleware-based locale routing with clean server/client component separation                                                                                                                                    |
 | **Framer Motion** | Used for page transitions and scroll animations. With multiple team members writing animation code, a consistent API and built-in `prefers-reduced-motion` support (`useReducedMotion`) made it the safer choice                                              |
 | **lucide-react**  | Lightweight, tree-shaken icon library for general-purpose icons. **Note:** version 1.0 removed all brand/logo icons (GitHub, LinkedIn, Twitter, etc.) — so the footer's social icons are hand-written inline SVGs instead of relying on an additional package |
+
+---
+
+## Lighthouse Audit
+
+This project is periodically audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to track performance, accessibility, best practices, and SEO scores.
+
+To run a local audit:
+
+```bash
+npm run build
+npm run start
+npx lighthouse http://localhost:3000 --view
+```
+
+### Latest Scores
+
+Tested locally against a **production build**, using Chrome DevTools Lighthouse (Desktop, Navigation mode). Three representative pages were audited to cover different risk areas: static content, client-side data/interactivity, and dynamic routing.
+
+| Page                                                         | Performance | Accessibility | Best Practices | SEO |
+| ------------------------------------------------------------ | ----------- | ------------- | -------------- | --- |
+| Landing (`/en`)                                              | 99          | 95            | 100            | 100 |
+| Bootcamps list (`/en/bootcamps`)                             | 100         | 90            | 100            | 100 |
+| Bootcamp detail (`/en/bootcamps/full-stack-web-development`) | 97          | 96            | 100            | 100 |
+
+> **Note:** The Bootcamps list page scores exactly 90 on Accessibility — passing, but with no margin. Worth revisiting before it silently regresses below the threshold.
+
+> Scores last updated: 2026-08-10
+
+### Screenshots
+
+**Landing (`/en`)**
+
+![Landing Lighthouse results](docs/lighthouse/landing.png)
+
+**Bootcamps list (`/en/bootcamps`)**
+
+![Bootcamps list Lighthouse results](docs/lighthouse/bootcamps.png)
+
+**Bootcamp detail (`/en/bootcamps/full-stack-web-development`)**
+
+![Bootcamp detail Lighthouse results](docs/lighthouse/full-stack-web-development.png)
 
 ---
 
