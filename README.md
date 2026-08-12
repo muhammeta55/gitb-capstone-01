@@ -18,6 +18,8 @@ A fully rebuilt, bilingual (EN/TR) bootcamp platform frontend, built from scratc
 - [Cross-Browser Testing](#cross-browser-testing)
 - [Known Issues / Limitations](#known-issues--limitations)
 - [Team & Responsibilities](#team--responsibilities)
+- [Project Management](#project-management)
+- [Retro Notes](#retro-notes)
 
 ---
 
@@ -236,6 +238,14 @@ Manually tested across Chrome, Firefox, and Safari on all pages (Landing, Bootca
 | R1 — Platform & Design System, Team Lead | Muhammet | Project setup, design tokens, shared UI components, layout, i18n/theme infrastructure, deployment, documentation |
 | R2 — Marketing Pages                     | Neslihan | Landing, About, Contact, page transition and scroll animations                                                   |
 | R3 — Product Pages                       | Sefa     | Bootcamps list/filters, Bootcamp detail, Schedule, Login/Register, 404, SEO, loading/error states                |
+
+---
+
+## Project Management
+
+Progress across all epics (A through G) and their individual tickets was tracked on Trello, with cards mirroring the same structure as the brief's Görev Kartları — organized by epic, moved through columns as work progressed, and kept up to date by the Team Lead throughout the project.
+
+**Board:** [trello.com/b/NzViueUh/gitb-capstone-01](https://trello.com/b/NzViueUh/gitb-capstone-01)
 
 ---
 
