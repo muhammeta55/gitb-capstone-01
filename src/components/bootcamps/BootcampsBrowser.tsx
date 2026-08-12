@@ -7,7 +7,7 @@ import { useFilters, SortOption } from "@/hooks/useFilters";
 import { filterBootcamps } from "@/lib/filterBootcamps";
 import { BootcampCard } from "./BootcampCard";
 import { Input } from "@/components/ui/Input";
-import { Select } from "@/components/ui/Select";
+import { CustomSelect } from "@/components/ui/CustomSelect";
 
 const LEVELS = ["beginner", "intermediate", "advanced"] as const;
 const SORTS: SortOption[] = ["popular", "price-asc", "price-desc", "duration"];
@@ -16,6 +16,31 @@ const SEARCH_DEBOUNCE_MS = 400;
 interface Props {
   bootcamps: Bootcamp[];
   categories: Category[];
+}
+
+// --- tiny inline icons, no new dependency required ---
+function SearchIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.5-3.5" />
+    </svg>
+  );
+}
+function XIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </svg>
+  );
+}
+function EmptyIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.5-3.5" />
+    </svg>
+  );
 }
 
 export function BootcampsBrowser({ bootcamps, categories }: Props) {
@@ -51,15 +76,28 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
     setFilters({ categories: next });
   }
 
+  const levelOptions = [
+    { value: "", label: t("allLevels") },
+    ...LEVELS.map((lvl) => ({ value: lvl, label: t(`level.${lvl}`) })),
+  ];
+
+  const sortOptions = SORTS.map((s) => ({ value: s, label: t(`sort.${s}`) }));
+
   return (
     <div className="space-y-6">
       {/* Arama */}
-      <Input
-        type="search"
-        value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
-        placeholder={t("searchPlaceholder")}
-      />
+      <div className="relative">
+        <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted">
+          <SearchIcon />
+        </span>
+        <Input
+          type="search"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          placeholder={t("searchPlaceholder")}
+          className="rounded-full pl-10 pr-4 py-2.5 shadow-sm border-border focus:ring-primary focus:border-primary [&::-webkit-search-cancel-button]:hidden"
+        />
+      </div>
 
       {/* Kategori çipleri */}
       <div className="flex flex-wrap gap-2">
@@ -71,10 +109,10 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
               type="button"
               onClick={() => toggleCategory(cat.slug)}
               aria-pressed={active}
-              className={`rounded-full px-3 py-1.5 text-sm transition-colors ${
+              className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-all duration-150 ${
                 active
-                  ? "bg-primary text-background"
-                  : "bg-muted/10 hover:bg-muted/20"
+                  ? "bg-primary text-background shadow-sm"
+                  : "bg-muted/10 text-muted hover:bg-primary/10 hover:text-primary"
               }`}
             >
               {cat.name}
@@ -85,28 +123,17 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
 
       {/* Seviye + sıralama */}
       <div className="flex flex-wrap items-center gap-3">
-        <Select
+        <CustomSelect
           value={filters.level}
-          onChange={(e) => setFilters({ level: e.target.value })}
-        >
-          <option value="">{t("allLevels")}</option>
-          {LEVELS.map((lvl) => (
-            <option key={lvl} value={lvl}>
-              {t(`level.${lvl}`)}
-            </option>
-          ))}
-        </Select>
+          options={levelOptions}
+          onChange={(v) => setFilters({ level: v })}
+        />
 
-        <Select
+        <CustomSelect
           value={filters.sort}
-          onChange={(e) => setFilters({ sort: e.target.value as SortOption })}
-        >
-          {SORTS.map((s) => (
-            <option key={s} value={s}>
-              {t(`sort.${s}`)}
-            </option>
-          ))}
-        </Select>
+          options={sortOptions}
+          onChange={(v) => setFilters({ sort: v as SortOption })}
+        />
 
         {hasActiveFilters && (
           <button
@@ -115,22 +142,26 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
               setSearchInput("");
               clearFilters();
             }}
-            className="text-sm text-primary underline underline-offset-4"
+            className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium text-muted hover:bg-muted/10 hover:text-text transition-colors"
           >
+            <XIcon />
             {t("clearFilters")}
           </button>
         )}
       </div>
 
       {/* Sonuç sayısı */}
-      <p className="text-sm text-muted" aria-live="polite">
+      <p className="text-sm font-medium text-muted" aria-live="polite">
         {t("resultCount", { count: results.length })}
       </p>
 
       {/* Sonuçlar */}
       {results.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-muted/30 py-16 text-center">
-          <p className="font-medium">{t("noResults")}</p>
+        <div className="flex flex-col items-center rounded-2xl border border-dashed border-border bg-muted/5 py-16 text-center">
+          <span className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-background text-muted shadow-sm">
+            <EmptyIcon />
+          </span>
+          <p className="font-medium text-text">{t("noResults")}</p>
           <p className="mt-1 text-sm text-muted">{t("noResultsHint")}</p>
         </div>
       ) : (

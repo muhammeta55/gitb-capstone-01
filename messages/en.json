@@ -166,9 +166,9 @@
     }
   },
   "schedulePage": {
-    "title": "Upcoming Bootcamps",
+    "title": "Upcoming Programs",
     "subtitle": "Browse our upcoming cohorts and find the perfect program for your career.",
-    "eyebrow": "Upcoming Programs",
+    "eyebrow": "GITBootcamp",
     "starts": "Starts",
     "ends": "Ends",
     "viewDetails": "View Course Details",

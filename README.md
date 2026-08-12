@@ -2,7 +2,7 @@
 
 A fully rebuilt, bilingual (EN/TR) bootcamp platform frontend, built from scratch for the Global IT Bootcamp frontend capstone project. Built with Next.js App Router, TypeScript, and Tailwind CSS v4.
 
-**Live demo:** _(Vercel deploy URL goes here)_
+**Live demo:** [gitb-capstone-01.vercel.app](https://gitb-capstone-01.vercel.app)
 
 ---
 
@@ -14,6 +14,7 @@ A fully rebuilt, bilingual (EN/TR) bootcamp platform frontend, built from scratc
 - [Folder Structure](#folder-structure)
 - [Architecture Decisions](#architecture-decisions)
 - [Libraries Used](#libraries-used)
+- [Lighthouse Audit](#lighthouse-audit)
 - [Known Issues / Limitations](#known-issues--limitations)
 - [Team & Responsibilities](#team--responsibilities)
 
@@ -29,7 +30,17 @@ A ground-up rebuild of the frontend for Global IT Bootcamp's existing bootcamp p
 
 ### Screenshots
 
-_(Landing page, Bootcamps list, Bootcamp detail, and dark mode screenshots go here)_
+**Landing (light mode)**
+
+![Landing page, light mode](docs/screenshots/landing_light.png)
+
+**Landing (dark mode)**
+
+![Landing page, dark mode](docs/screenshots/landing_dark.png)
+
+**Bootcamps list**
+
+![Bootcamps list page](docs/screenshots/bootcamps.png)
 
 ---
 
@@ -149,6 +160,48 @@ Primitives like `Button`, `Card`, `Input`, and `Badge` live centrally in `src/co
 
 ---
 
+## Lighthouse Audit
+
+This project is periodically audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to track performance, accessibility, best practices, and SEO scores.
+
+To run a local audit:
+
+```bash
+npm run build
+npm run start
+npx lighthouse http://localhost:3000 --view
+```
+
+### Latest Scores
+
+Tested locally against a **production build**, using Chrome DevTools Lighthouse (Desktop, Navigation mode). Three representative pages were audited to cover different risk areas: static content, client-side data/interactivity, and dynamic routing.
+
+| Page                                                         | Performance | Accessibility | Best Practices | SEO |
+| ------------------------------------------------------------ | ----------- | ------------- | -------------- | --- |
+| Landing (`/en`)                                              | 99          | 95            | 100            | 100 |
+| Bootcamps list (`/en/bootcamps`)                             | 100         | 90            | 100            | 100 |
+| Bootcamp detail (`/en/bootcamps/full-stack-web-development`) | 97          | 96            | 100            | 100 |
+
+> **Note:** The Bootcamps list page scores exactly 90 on Accessibility — passing, but with no margin. Worth revisiting before it silently regresses below the threshold.
+
+> Scores last updated: 2026-08-10
+
+### Screenshots
+
+**Landing (`/en`)**
+
+![Landing Lighthouse results](docs/lighthouse/landing.png)
+
+**Bootcamps list (`/en/bootcamps`)**
+
+![Bootcamps list Lighthouse results](docs/lighthouse/bootcamps.png)
+
+**Bootcamp detail (`/en/bootcamps/full-stack-web-development`)**
+
+![Bootcamp detail Lighthouse results](docs/lighthouse/full-stack-web-development.png)
+
+---
+
 ## Known Issues / Limitations
 
 - **Cosmetic console warning:** The theme flash-prevention script triggers a known React 19 / Next.js 16.2+ false-positive warning ("Encountered a script tag...") during page transitions. The script works correctly, there's no visible flash, and it doesn't affect the production build.
@@ -171,4 +224,23 @@ Primitives like `Button`, `Card`, `Input`, and `Badge` live centrally in `src/co
 
 ## Retro Notes
 
-_(To be added before Demo Day: what went well, what didn't, what we'd change)_
+### What went well
+
+- **The component-first foundation paid off.** Getting Button, Card, Input, Badge and the rest of `components/ui/` locked down on Day 1-2 meant R2 and R3 were never blocked waiting on shared pieces, and a single token change (like a new radius value) propagated everywhere automatically.
+- **Review discipline actually caught real bugs.** Not stylistic nitpicks — genuine regressions: a dark-mode redesign that shipped with zero design tokens, a lint rule silently broken twice, a production-only routing crash that `npm run dev` never revealed. Every one of these was caught before merging to `main`, exactly what the review process is for.
+- **We completed the full Should list**, not just the Musts: search/filter/sort, cookie consent, live countdown, SEO metadata, and a static student dashboard mockup — while keeping every Must item done first.
+- **Debugging sessions turned into documentation.** The `generateStaticParams` locale bug, the `min-h-full` vs `min-h-screen` footer-pinning saga, and the dual-instance theme-sync race condition all became Architecture Decisions in this README, not just fixed-and-forgotten commits.
+
+### What didn't go well
+
+- **The same regression landed twice.** The `h-full` → `min-h-screen` footer bug was fixed once, then reintroduced when a later PR (SEO metadata) was branched from an older `main` and rewrote the same file. We didn't have a habit of pulling latest `main` immediately before starting work on shared files.
+- **Dependency duplication happened more than once.** Two different branches each independently added `lucide-react` before either merged, causing an avoidable `package-lock.json` conflict. A quick "check `package.json` on main first" step would have prevented it.
+- **A few production-only bugs stayed hidden longer than they should have.** Several of us defaulted to testing with `npm run dev`, which never triggers Next.js's static-generation edge cases. The actual production bug (`DYNAMIC_SERVER_USAGE`) was only found once someone ran a real `npm run build && npm run start`.
+- **Translation JSON merge conflicts were a recurring source of friction** — not because the content actually conflicted, but because multiple people's new keys kept landing on the same lines in `messages/en.json` / `messages/tr.json`.
+
+### What we'd change next time
+
+- **Establish a "pull main before branching on shared files" habit explicitly**, especially for `layout.tsx`, `globals.css`, and the translation JSON files — these are the files every feature branch eventually touches.
+- **Run a production build check earlier and more often**, not just before a deadline. A `npm run build && npm run start` pass after any routing or layout change would have caught the locale/static-generation bug days sooner.
+- **Announce new dependencies to the team before adding them**, even small ones — a one-line Slack message would have avoided every duplicate-dependency conflict we hit.
+- **Structure translation files to reduce merge collisions** — e.g., splitting `messages/en.json` into smaller per-feature files instead of one large file, so two people's simultaneous additions don't land on the same lines.
