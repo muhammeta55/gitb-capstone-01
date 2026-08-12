@@ -15,6 +15,7 @@ A fully rebuilt, bilingual (EN/TR) bootcamp platform frontend, built from scratc
 - [Architecture Decisions](#architecture-decisions)
 - [Libraries Used](#libraries-used)
 - [Lighthouse Audit](#lighthouse-audit)
+- [Cross-Browser Testing](#cross-browser-testing)
 - [Known Issues / Limitations](#known-issues--limitations)
 - [Team & Responsibilities](#team--responsibilities)
 
@@ -199,6 +200,22 @@ Tested locally against a **production build**, using Chrome DevTools Lighthouse 
 **Bootcamp detail (`/en/bootcamps/full-stack-web-development`)**
 
 ![Bootcamp detail Lighthouse results](docs/lighthouse/full-stack-web-development.png)
+
+---
+
+## Cross-Browser Testing
+
+Manually tested across Chrome, Firefox, and Safari on all pages (Landing, Bootcamps list/detail, Schedule, About, Contact, Login/Register, 404, Dashboard).
+
+| Browser | Tested by |
+| ------- | --------- |
+| Chrome  | Sefa      |
+| Firefox | Sefa      |
+| Safari  | Neslihan  |
+
+**Checked on each:** layout integrity, dark/light mode rendering, form validation, animations, and console warnings/errors.
+
+**Result:** No browser-specific issues found.
 
 ---
 
