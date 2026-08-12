@@ -3,6 +3,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { cohorts } from "@/data/cohorts";
 import { bootcamps } from "@/data/bootcamps";
 import { CohortCountdown } from "@/components/schedule/CohortCountdown";
+import { HeroBackground } from "@/components/landing/HeroBackground";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("meta.schedule");
@@ -52,6 +53,20 @@ function groupByMonth(locale: string) {
   return groups;
 }
 
+// All distinct hero images from the bootcamps data — same source the
+// bootcamps page uses, so the two hero slideshows feel like one family.
+function getSlideshowImages() {
+  const seen = new Set<string>();
+  const images: string[] = [];
+  for (const b of bootcamps) {
+    if (b.heroImage && !seen.has(b.heroImage)) {
+      seen.add(b.heroImage);
+      images.push(b.heroImage);
+    }
+  }
+  return images;
+}
+
 // --- tiny inline icons so no new dependency is required ---
 function CalendarIcon() {
   return (
@@ -91,31 +106,27 @@ export default async function SchedulePage() {
   const t = await getTranslations("schedulePage");
   const locale = await getLocale();
   const groups = groupByMonth(locale);
+  const heroImages = getSlideshowImages();
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background">
-      {/* subtle ambient background */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 [background-image:radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] [background-size:28px_28px] opacity-60"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-gradient-to-b from-primary/10 via-primary/5 to-transparent blur-3xl"
-      />
+    <main className="min-h-screen bg-background">
+      {/* Photo hero — same pattern/component as the bootcamps page */}
+      <section className="relative overflow-hidden border-b border-border">
+        <HeroBackground images={ [...heroImages].reverse() } />
+        <div aria-hidden="true" className="absolute inset-0 bg-black/60" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-        {/* Header */}
-        <div className="mb-12 text-center">
+        <div className="relative mx-auto max-w-4xl px-4 py-20 sm:py-24 text-center">
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-primary uppercase mb-3">
             {t("eyebrow")}
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-text">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             {t("title")}
           </h1>
-          <p className="mt-3 text-muted max-w-xl mx-auto">{t("subtitle")}</p>
+          <p className="mt-3 text-white/80 max-w-xl mx-auto">{t("subtitle")}</p>
         </div>
+      </section>
 
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
         <div className="space-y-14">
           {Array.from(groups.entries()).map(([month, items]) => (
             <section key={month}>
