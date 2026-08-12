@@ -29,6 +29,19 @@ export function HeroBackground({ images }: HeroBackgroundProps) {
     return () => clearInterval(timer);
   }, [images.length, prefersReducedMotion]);
 
+  // Preload the next image in the sequence ahead of its turn. Without
+  // this, the crossfade can start before the browser has actually
+  // fetched the upcoming image — instead of a smooth 1.2s fade, the
+  // image abruptly "pops in" once the fetch finally resolves. Preloading
+  // gives it the full rotation interval (6s) to fetch, so by the time
+  // it becomes active it's already in the browser cache.
+  useEffect(() => {
+    if (images.length < 2) return;
+    const nextIndex = (index + 1) % images.length;
+    const preload = new window.Image();
+    preload.src = images[nextIndex];
+  }, [index, images]);
+
   return (
     <AnimatePresence mode="sync">
       <motion.div

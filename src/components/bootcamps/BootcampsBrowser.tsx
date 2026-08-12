@@ -76,6 +76,12 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
     setFilters({ categories: next });
   }
 
+  // Aramayı anında temizle — debounce'u beklemeden
+  function clearSearch() {
+    setSearchInput("");
+    setFilters({ q: "" });
+  }
+
   const levelOptions = [
     { value: "", label: t("allLevels") },
     ...LEVELS.map((lvl) => ({ value: lvl, label: t(`level.${lvl}`) })),
@@ -95,8 +101,18 @@ export function BootcampsBrowser({ bootcamps, categories }: Props) {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
           placeholder={t("searchPlaceholder")}
-          className="rounded-full pl-10 pr-4 py-2.5 shadow-sm border-border focus:ring-primary focus:border-primary [&::-webkit-search-cancel-button]:hidden"
+          className="rounded-full pl-10 pr-10 py-2.5 shadow-sm border-border focus:ring-primary focus:border-primary [&::-webkit-search-cancel-button]:hidden"
         />
+        {searchInput && (
+          <button
+            type="button"
+            onClick={clearSearch}
+            aria-label={t("clearFilters")}
+            className="absolute right-3 top-1/2 -translate-y-1/2 flex h-5 w-5 items-center justify-center rounded-full text-muted hover:bg-muted/10 hover:text-text transition-colors"
+          >
+            <XIcon />
+          </button>
+        )}
       </div>
 
       {/* Kategori çipleri */}

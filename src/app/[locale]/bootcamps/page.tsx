@@ -6,6 +6,7 @@ import { bootcamps } from "@/data/bootcamps";
 import { categories } from "@/data/categories";
 import { BootcampsBrowser } from "@/components/bootcamps/BootcampsBrowser";
 import { BootcampsGridSkeleton } from "@/components/bootcamps/BootcampGridSkeleton";
+import { HeroBackground } from "@/components/landing/HeroBackground";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("meta.bootcamps");
@@ -32,68 +33,19 @@ function getSlideshowImages() {
   return images;
 }
 
-function HeroSlideshow() {
-  const images = getSlideshowImages();
-  const n = images.length;
-  if (n === 0) return null;
-
-  const slot = 100 / n;
-  const fade = slot * 0.15;
-  // ~3s per image dwell time — with 12 images that's a 36s full loop,
-  // long enough not to feel frantic, short enough to stay lively.
-  const totalDuration = n * 3;
-
-  return (
-    <div aria-hidden className="absolute inset-0 z-0 overflow-hidden">
-      <style>{`
-        ${images
-          .map((_, i) => {
-            const start = i * slot;
-            const end = (i + 1) * slot;
-            return `
-              @keyframes heroSlide${i} {
-                0%, ${start}% { opacity: 0; }
-                ${start + fade}%, ${end - fade}% { opacity: 1; }
-                ${end}%, 100% { opacity: 0; }
-              }
-            `;
-          })
-          .join("\n")}
-      `}</style>
-      {images.map((src, i) => (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          key={src}
-          src={src}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{
-            opacity: 0,
-            animation: `heroSlide${i} ${totalDuration}s ease-in-out infinite`,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function BootcampsPage() {
   const t = useTranslations("bootcampsPage");
+  const heroImages = getSlideshowImages();
 
   return (
     <>
-      <section className="relative overflow-hidden bg-background">
-        <HeroSlideshow />
-
+      <section className="relative overflow-hidden border-b border-border">
+        <HeroBackground images={heroImages} />
         {/* darkens the photos for text legibility — intentionally fixed,
-            same pattern as the Landing Hero's photo overlay */}
-        <div aria-hidden className="absolute inset-0 z-10 bg-black/55" />
-        <div
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-b from-transparent to-background"
-        />
+            same peak opacity as the Landing Hero's photo overlay */}
+        <div aria-hidden="true" className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-20 max-w-4xl mx-auto px-4 pt-24 pb-32 text-center">
+        <div className="relative mx-auto max-w-4xl px-4 py-24 sm:py-32 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             {t("title")}
           </h1>
