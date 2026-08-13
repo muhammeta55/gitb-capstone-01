@@ -17,6 +17,7 @@ export function MobileMenu() {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- document.body only exists client-side, portal target must wait for mount
     setMounted(true);
   }, []);
 
