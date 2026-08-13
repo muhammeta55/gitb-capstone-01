@@ -43,7 +43,7 @@ export function HeroBackground({ images }: HeroBackgroundProps) {
   }, [index, images]);
 
   return (
-    <AnimatePresence mode="sync">
+    <AnimatePresence mode="sync" initial={false}>
       <motion.div
         key={images[index]}
         initial={{ opacity: 0 }}
