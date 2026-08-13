@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t("title"),
       description: t("description"),
-    }
+    },
   };
 }
 
@@ -30,8 +30,12 @@ export default function Home() {
     <>
       <Hero />
       <StatsStrip />
-      <FeaturedPrograms />
-      <CategoryGrid />
+      <ScrollReveal>
+        <FeaturedPrograms />
+      </ScrollReveal>
+      <ScrollReveal>
+        <CategoryGrid />
+      </ScrollReveal>
       <ScrollReveal>
         <Features />
       </ScrollReveal>
@@ -44,9 +48,15 @@ export default function Home() {
       <ScrollReveal>
         <Testimonials />
       </ScrollReveal>
-      <Pricing />
-      <Newsletter />
-      <ClosingCTA />
+      <ScrollReveal>
+        <Pricing />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Newsletter />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ClosingCTA />
+      </ScrollReveal>
     </>
   );
 }
